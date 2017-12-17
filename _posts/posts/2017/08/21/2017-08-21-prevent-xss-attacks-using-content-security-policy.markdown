@@ -12,9 +12,7 @@ layout: post
 
 Today, I am working my project and make a script that downloads the other scripts. To test script working fine, I m trying to run this script on the console of the opened website.I tried it on my own website, it works fine but when I try to run the script in Gmail website console. I got an error:
 
-```
-Refused to load the script 'http://abc.com/abc.js' because it violates the following Content Security Policy ﻿directive: "script-src https://clients4.google.com/insights/consumersurveys/ ﻿https://www.google.com/js/bg/ 'self' 'unsafe-inline' 'unsafe-eval' ﻿https://mail.google.com/*scs/mail-static/ ﻿https://hangouts.google.com/ https://talkgadget.google.com/ ﻿https://\*.talkgadget.google.com/ ﻿https://www.googleapis.com/appsmarket/v2/installedApps/ ﻿https://www-gm-opensocial.googleusercontent.com/gadgets/js/ ﻿https://docs.google.com/static/doclist/client/js/ ﻿https://www.google.com/tools/feedback/ ﻿https://s.ytimg.com/yts/jsbin/ ﻿https://www.youtube.com/iframe_api ﻿https://ssl.google-analytics.com/ ﻿https://apis.google.com/*/scs/abc-static/ ﻿https://apis.google.com/js/ ﻿https://clients1.google.com/complete/....".
-```
+    Refused to load the script 'http://abc.com/abc.js' because it violates the following Content Security Policy ﻿directive: "script-src https://clients4.google.com/insights/consumersurveys/ ﻿https://www.google.com/js/bg/ 'self' 'unsafe-inline' 'unsafe-eval' ﻿https://mail.google.com/*scs/mail-static/ ﻿https://hangouts.google.com/ https://talkgadget.google.com/ ﻿https://\*.talkgadget.google.com/ ﻿https://www.googleapis.com/appsmarket/v2/installedApps/ ﻿https://www-gm-opensocial.googleusercontent.com/gadgets/js/ ﻿https://docs.google.com/static/doclist/client/js/ ﻿https://www.google.com/tools/feedback/ ﻿https://s.ytimg.com/yts/jsbin/ ﻿https://www.youtube.com/iframe_api ﻿https://ssl.google-analytics.com/ ﻿https://apis.google.com/*/scs/abc-static/ ﻿https://apis.google.com/js/ ﻿https://clients1.google.com/complete/....".
 
 I saw this error in console screen, so try to find the why Gmail does n’t allow me. In error, I found the Content security policy. This is property who tell the browser which content needs to be download on a page.
 
@@ -26,15 +24,13 @@ To add content security policy on your site, what you have to do, is to add a me
 
 or in a server response(in web.config)
 
-```
-<system.webServer>
-    <httpProtocol>
-        <customHeaders>
-             <add name="Content-Security-Policy" value="default-src 'self';" />
-        </customHeaders>
-    </httpProtocol>
-</system.webServer>
-```
+    <system.webServer>
+        <httpProtocol>
+            <customHeaders>
+                 <add name="Content-Security-Policy" value="default-src 'self';" />
+            </customHeaders>
+        </httpProtocol>
+    </system.webServer>
 
 **The most common directives are**:
 
