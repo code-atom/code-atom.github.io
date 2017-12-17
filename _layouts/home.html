@@ -1,0 +1,37 @@
+---
+ layout: default 
+---
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      {% for post in site.posts %} {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <div class="post-preview">
+        <a href="{{ post.url | relative_url }}">
+          <h2 class="post-title">
+            {{ post.title | escape }}
+          </h2>
+          {% if post.subTitle %}
+          <h3 class="post-subtitle">
+            {{ post.subTitle | escape }}
+          </h3>
+          {% endif %}
+        </a>
+        <p class="post-meta">Posted by
+          <a href="https://github.com/{{ site.github_username }}">{{ site.github_username | escape }}</a>
+          on {{ post.date | date: date_format }}</p>
+      </div>
+      <hr> {% endfor %}
+      <!-- Pager -->
+      <div class="clearfix">
+        {% if paginator.previous_page %}
+        <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}"
+          class="prev">Prev</a>
+        {% endif %} {% if paginator.next_page %}
+        <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+          class="next">Next</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

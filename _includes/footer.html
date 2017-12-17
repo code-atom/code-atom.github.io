@@ -1,0 +1,21 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="mailto:{{ site.email }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% if site.twitter_username %} {% include icon-twitter.html username=site.twitter_username %} {% endif %} {% include icon-stackoverflow.html
+          %} {% if site.github_username %} {% include icon-github.html username=site.github_username %} {% endif %}
+        </ul>
+        <!-- <p class="copyright text-muted">Copyright &copy; Your Website {{ site.time | date: "%Y" }}</p> -->
+      </div>
+    </div>
+  </div>
+</footer>
