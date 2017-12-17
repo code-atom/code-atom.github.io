@@ -5,6 +5,7 @@ collections:
   security:
     title: Posts
     output: true
+    permalink: "/security/:year/:month/:day/:title"
   posts:
     title: Posts
     output: true
