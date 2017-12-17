@@ -11,9 +11,7 @@ collections:
 author: Ankit Rana
 email: ankit.rana.1195@gmail.com
 defaultbackground: "/assets/images/backdrop.jpg"
-description: Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
+description: 
 url: 
 github_username: code-atom
 markdown: kramdown
