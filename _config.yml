@@ -15,6 +15,7 @@ plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
 - jekyll-paginate
+
 permalink: "/posts/:year/:month/:day/:title"
 paginate: 20
 paginate_path: page/:num
