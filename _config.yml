@@ -1,6 +1,13 @@
 ---
 title: null-pointer
 timezone: Asia/Kolkata
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 author: Ankit Rana
 email: ankit.rana.1195@gmail.com
 defaultbackground: "/assets/images/backdrop.jpg"
