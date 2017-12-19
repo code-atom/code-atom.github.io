@@ -1,6 +1,13 @@
 ---
 title: null-pointer
 timezone: Asia/Kolkata
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 author: Ankit Rana
 email: ankit.rana.1195@gmail.com
 defaultbackground: "/assets/images/backdrop.jpg"
@@ -13,7 +20,6 @@ plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
 - jekyll-paginate
-
 permalink: "/posts/:year/:month/:day/:title"
 paginate: 20
 paginate_path: page/:num

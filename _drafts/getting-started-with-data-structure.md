@@ -1,11 +1,11 @@
 ---
 title: Getting Started with Data Structure
-subTitle: introduction about what  data structure is and what is ADT
-background: https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18838881.jpg
-date: '2017-08-19 21:00:00'
+date: 2017-08-19 21:00:00 +05:30
 tags:
 - data structure
 - general
+subTitle: introduction about what  data structure is and what is ADT
+background: https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18838881.jpg
 layout: post
 ---
 
