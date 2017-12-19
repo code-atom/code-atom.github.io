@@ -1,9 +1,11 @@
 ---
 title: About Me
 permalink: "/about"
+showNavBar: true
 layout: page
 subTitle: This is what I do.
 background: https://i.pinimg.com/originals/40/1c/4d/401c4db1968857b107036738fa740683.jpg
+
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
