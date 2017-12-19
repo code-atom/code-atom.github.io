@@ -4,19 +4,30 @@ permalink: "/about"
 showNavBar: true
 layout: page
 subTitle: This is what I do.
-background: https://i.pinimg.com/originals/40/1c/4d/401c4db1968857b107036738fa740683.jpg
-
+background: https://scontent.fixc2-1.fna.fbcdn.net/v/t1.0-9/25348636_1543958589030123_6945409443435432174_n.jpg?oh=138c6f8cb888376d806fdd49bea746c5&oe=5ABADFF5
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi, I am` Ankit Rana`, passionate developer, love to work in C# and javascript. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am always interested in low-level application problem that related to application architecture and how to communicate with third-party services.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I want to become a Solution Architecture and also want to create the artificially intelligent application.
+
+Currently, I am interested in cloud application architecture learning blockchain, learning basic to javascript.
+
+**My Favourites Books**
+* You don't know Js
+* Programming with Entity Framework Code First
+* Programming  Entity Framework: Dbcontext
+* ng-book 2
+* C# in depth (confusing  :P)  but interesting.
 
 
-[jekyll-organization]: https://github.com/jekyll
+
+# My  Code Gurus(Master)
+* Sunny Prakash
+* Upkaar Singh
+* Sandeep 
+* Julia Lerma
+* Kyle Simpson
+* Scott Allen

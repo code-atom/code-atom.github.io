@@ -5,10 +5,8 @@ author: Ankit Rana
 email: ankit.rana.1195@gmail.com
 defaultbackground: "/assets/images/backdrop.jpg"
 description: 
-url: 
 github_username: code-atom
 markdown: kramdown
-theme: minima
 plugins:
 - jekyll-feed
 - jekyll-redirect-from
