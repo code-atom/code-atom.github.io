@@ -8,10 +8,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-  data-structure:
-    title: data-structure
-    output: true
-    description: asd
 author: Ankit Rana
 email: ankit.rana.1195@gmail.com
 defaultbackground: "/assets/images/backdrop.jpg"
