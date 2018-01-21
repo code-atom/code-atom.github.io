@@ -1,10 +1,10 @@
 ---
 title: Angular Best Practice For Component
 date: 2018-01-21 21:30:00 +05:30
-subTitle: 
 tags:
 - Angular
 - Angular-best-practices
+subTitle: 
 background: https://www.efrontlearning.com/blog/wp-content/uploads/2013/08/homepage-design-best-practices.jpg
 layout: post
 ---
