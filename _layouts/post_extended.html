@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
+
+<body>
+    {% include navbar.html %} 
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto"></div>
+                    <div class="site-heading">
+                        <h1>{{ page.title | default: site.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="clearfix">
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}" title="Previous Post: 
+  {{page.previous.title}}" class="btn btn-primary float-left">&laquo; {{page.previous.title}}</a>
+        {% endif %} {% if page.next.url %}
+        <a href="{{page.next.url}}" title="next Post: 
+  {{page.next.title}}" class="btn btn-primary float-right">{{page.next.title}} &raquo; </a>
+        {% endif %}
+    </div>
+
+
+    {% if site.disqus_short_name and page.comments == true %}
+    <section id="comment">
+        <h1 class="title">Comments</h1>
+        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+    </section>
+    {% endif %} 
+    {% include footer.html %}
+    <!-- Bootstrap core JavaScript -->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript">
+        var cb = function () {
+            var l = document.createElement('link'); l.rel = 'stylesheet';
+            l.href = '/assets/code-atom.github.io_app_min.css';
+            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(cb);
+        else window.addEventListener('load', cb);
+    </script>
+    <script src="/assets/main.js"></script>
+</body>
+
+</html>
