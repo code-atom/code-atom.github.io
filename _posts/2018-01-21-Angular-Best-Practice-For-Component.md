@@ -1,6 +1,6 @@
 ---
 title: Angular Best Practice For Component
-date: '2018-01-21 21:30:00'
+date: 2018-01-21 21:30:00 +05:30
 tags:
 - Angular
 - Angular-best-practices
