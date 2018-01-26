@@ -29,7 +29,7 @@ In angular, applications built with components, a component is as same as a cont
 
 ## **Prefix Component Selector**
 
-Let say if you create a component in an angular app, first it must be **located in their feature module**. The second thing is we need to set component selector according to feature module and if you have a **common component** that resides in a shared module then **selector prefix will be app name**.
+Let say if you create a component in an angular app, first it must be **located in their feature module**. The second thing is we need to set component selector according to feature module and if you have a **common component** ,that resides in a shared module, **use app name as selector prefix**.
 
 Let say we look at a very common scenario like we have loading component in our application. so we can set their selector property with a prefix of the app name.
 
