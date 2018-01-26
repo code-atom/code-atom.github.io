@@ -9,7 +9,7 @@ background: https://www.efrontlearning.com/blog/wp-content/uploads/2013/08/homep
 layout: post
 ---
 
-In angular, our all application built with components, component is same as a controller in angular V1.x. The Component is the important building of Angular App.  Due to its importance, we must have to follow the best practices while creating a component in the app.
+In angular, applications built with components, a component is as same as a controller in angular V1.x. The Component is the important building block of Angular App. Due to its importance, we must have to follow the best practices while creating a component in the app.
 
 In angular, applications built with components, a component is as same as a controller in angular V1.x. The Component is the important building block of Angular App. Due to its importance, we must have to follow the best practices while creating a component in the app.
 
@@ -32,15 +32,14 @@ In angular, applications built with components, a component is as same as a cont
 Let say if you create a component in an angular app, first it must be **located in their feature module**. The second thing is we need to set component selector according to feature module and if you have a **common component** that resides in a shared module then **selector prefix will be app name**.
 
 Let say we look at a very common scenario like we have loading component in our application. so we can set their selector property with a prefix of the app name.
-```
-@Component({
-  selector: 'app-loading-spinner', // here you can see the 'app' is prefix with component selector
-  template: '<img *ngIf="loading" src="./assets/images/loading.gif" />'
-})
-export class LoadingComponent {
-  @Input() loading:boolean;
-}
-```
+
+    @Component({
+      selector: 'app-loading-spinner', // here you can see the 'app' is prefix with component selector
+      template: '<img *ngIf="loading" src="./assets/images/loading.gif" />'
+    })
+    export class LoadingComponent {
+      @Input() loading:boolean;
+    }
 
 It helps us to remove the conflict between different components. The **prefix must be 3 or 4 characters l**ong.
 
@@ -50,7 +49,7 @@ It is considered to good practice if you have **code more than 3 line** in CSS a
 
 ## **Handle @Input and @Output**
 
-In Angular Component, you can define the input and output property in metadata component or use decorators. Now which one better approach.** @Decorator approach is the best approach for declaring the input and output property** in the component. Because it helps us identify which property is input and which one is output at glance.
+In Angular Component, you can define the input and output property in metadata component or use decorators. Now which one better approach.\*\* @Decorator approach is the best approach for declaring the input and output property\*\* in the component. Because it helps us identify which property is input and which one is output at glance.
 
 ## **Delegating complex logic to service**
 
@@ -58,7 +57,7 @@ As we previous discuss the single repository principal in handling CSS and HTML 
 
 ## **Component Member Sequences**
 
-The best practice of declaring member in the component is to declare all the properties before constructor or methods. The class member** ordering must be the public class member must be declared before the private class member**. This ordering will apply to both property and method means first public properties and then private properties and same for methods.
+The best practice of declaring member in the component is to declare all the properties before constructor or methods. The class member\*\* ordering must be the public class member must be declared before the private class member\*\*. This ordering will apply to both property and method means first public properties and then private properties and same for methods.
 
 ## **Implement Life Cycle hooks in Component**
 
