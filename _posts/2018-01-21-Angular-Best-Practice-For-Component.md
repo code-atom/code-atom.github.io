@@ -43,7 +43,7 @@ It helps us to remove the conflict between different components. The **prefix mu
 
 ## **Separate inline CSS and HTML from Component**
 
-It is considered to good practice if you have **code more than 3 line** in CSS and HTML template property of component declaration into a separate file for good readability. It also defines the Angular style guide. It also encourages Single Responsibility Principal and you can locate your code quickly.
+It is considered to good practice if you have **code more than 3 line** in CSS and HTML template property of component declaration into a separate file for good readability. It also defines the Angular style guide. It also boosts Single Responsibility Principal and you can locate your code quickly.
 
 ## **Handle @Input and @Output**
 
