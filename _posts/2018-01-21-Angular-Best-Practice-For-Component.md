@@ -11,8 +11,6 @@ layout: post
 
 In angular, applications built with components, a component is as same as a controller in angular V1.x. The Component is the important building block of Angular App. Due to its importance, we must have to follow the best practices while creating a component in the app.
 
-In angular, applications built with components, a component is as same as a controller in angular V1.x. The Component is the important building block of Angular App. Due to its importance, we must have to follow the best practices while creating a component in the app.
-
 ## **Best Practices**
 
 * Prefixing Component Selector.
