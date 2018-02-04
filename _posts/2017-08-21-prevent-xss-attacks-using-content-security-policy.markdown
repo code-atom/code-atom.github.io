@@ -1,7 +1,8 @@
 ---
 title: Prevent XSS Attacks using Content Security Policy
 date: 2017-08-21 23:03:00 +05:30
-category: Security
+categories:
+- Security
 tags:
 - Xss Attack
 - Xss Prevention
