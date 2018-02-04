@@ -1,7 +1,8 @@
 ---
 title: Angular Best Practice For Component
 date: 2018-01-21 21:30:00 +05:30
-category: Angular
+categories:
+- Angular
 tags:
 - Angular
 - Angular-best-practices
