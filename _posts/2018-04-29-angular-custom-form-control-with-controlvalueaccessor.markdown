@@ -5,7 +5,7 @@ categories:
 - Angular-form-api
 tags:
 - Angular
-background: https://www.efrontlearning.com/blog/wp-content/uploads/2013/08/homepage-design-best-practices.jpg
+background: "/uploads/arch-bridge-clouds-814499.jpg"
 layout: post
 ---
 
