@@ -10,22 +10,20 @@ DEMO: https://angular-fyummj.stackblitz.io
 Now we start, first create component named with **password.component**after that we set up the simple hide and show logic by switching the type property of input control.
 
 `<div class="form-group">
-  <div class="input-group">
-    <input \[type\]="!show ? 'password': 'text'"
-class="form-control"
-id="exampleInputAmount"
-placeholder="Enter Password"
-\[value\]="value"
-\(input)="pushChanges($event.target.value)">
-    <div class="input-group-addon">
-<i class="glyphicon"
-\[class.glyphicon-eye-open\]="!show"
-\[class.glyphicon-eye-close\]="show"
-\(click)="show = !show"></i>
-</div>
-  </div>
-</div>
-`
+        <div class="input-group">
+         <input [type]="!show ? 'password': 'text'"
+          class="form-control" 
+          id="exampleInputAmount" 
+          placeholder="Enter Password" [value]="value" (input)="pushChanges($event.target.value)">
+          <div class="input-group-addon"> 
+	          <i class="glyphicon" 
+		          [class.glyphicon-eye-open]="!show" 
+		          [class.glyphicon-eye-close]="show" 
+		          (click)="show = !show">
+	          </i>
+           </div> 
+         </div>
+       </div>`
 
 That all looks easy, but now you want to use this custom component with your Angular Forms(like in reactive forms). This stage where we need ControlValueAccessor interface.
 
@@ -56,8 +54,8 @@ multi: true,
 @Component({
 selector: 'app-password',
 templateUrl: './password.component.html',
-styleUrls: \['./password.component.css'\],
-providers: \[PASWORD_VALUE_ACCESSOR\]
+styleUrls: ['./password.component.css'],
+providers: [PASWORD_VALUE_ACCESSOR\]
 })
 export class PasswordComponent implements ControlValueAccessor {
 show: boolean = false;
@@ -80,6 +78,5 @@ registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
 setDisabledState(isDisabled: boolean): void {
 }
 }`
-
 
 This is it, now your custom component will easily communicate with Angular form.For better understanding please refer to[this post](https://blog.angularindepth.com/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms-93b9eee9ee83).
