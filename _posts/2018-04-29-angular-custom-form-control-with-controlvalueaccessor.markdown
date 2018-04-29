@@ -1,6 +1,12 @@
 ---
 title: Angular Custom Form Control With ControlValueAccessor
 date: 2018-04-29 18:37:00 +05:30
+categories:
+- Angular-form-api
+tags:
+- Angular
+background: https://www.efrontlearning.com/blog/wp-content/uploads/2013/08/homepage-design-best-practices.jpg
+layout: post
 ---
 
 Let suppose you want to create password component in which you want an option to hide/see password on eye-like button click. We see this type of component in many sites, the common one is bitbucket login page where you can see your enter password before submitting the form.
