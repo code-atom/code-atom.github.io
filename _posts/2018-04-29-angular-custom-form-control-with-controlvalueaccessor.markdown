@@ -15,21 +15,23 @@ DEMO: https://angular-fyummj.stackblitz.io
 
 Now we start, first create component named with **password.component**after that we set up the simple hide and show logic by switching the type property of input control.
 
-`<div class="form-group">
-        <div class="input-group">
-         <input [type]="!show ? 'password': 'text'"
-          class="form-control" 
-          id="exampleInputAmount" 
-          placeholder="Enter Password" [value]="value" (input)="pushChanges($event.target.value)">
-          <div class="input-group-addon"> 
-	          <i class="glyphicon" 
-		          [class.glyphicon-eye-open]="!show" 
-		          [class.glyphicon-eye-close]="show" 
-		          (click)="show = !show">
-	          </i>
-           </div> 
-         </div>
-       </div>`
+```
+<div class="form-group">
+   <div class="input-group">
+      <input [type]="!show ? 'password': 'text'"
+	  class="form-control" 
+	  id="exampleInputAmount" 
+	  placeholder="Enter Password" [value]="value" (input)="pushChanges($event.target.value)">
+   <div class="input-group-addon"> 
+      <i class="glyphicon" 
+	  [class.glyphicon-eye-open]="!show" 
+	  [class.glyphicon-eye-close]="show" 
+	  (click)="show = !show">
+      </i>
+   </div> 
+ </div>
+</div>
+```
 
 That all looks easy, but now you want to use this custom component with your Angular Forms(like in reactive forms). This stage where we need ControlValueAccessor interface.
 
@@ -47,7 +49,7 @@ Two important methods of a form control:
 
 RegisterOnChange sends a callback function that is used to notify the update value of a control. The callback function provides update value back to form control. In our currentexample, you can see **pushChange(value: any)** is used to push new value to form control API.
 
-`
+```
 import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -83,6 +85,7 @@ registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
 
 setDisabledState(isDisabled: boolean): void {
 }
-}`
+}
+```
 
 This is it, now your custom component will easily communicate with Angular form.For better understanding please refer to[this post](https://blog.angularindepth.com/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms-93b9eee9ee83).
