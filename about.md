@@ -11,7 +11,7 @@ Hi, I am` Ankit Rana`, passionate developer, love to work in C# and javascript.
 
 I am always interested in low-level application problem that related to application architecture and how to communicate with third-party services.
 
-I want to become a Solution Architecture and also want to create the artificially intelligent application.
+I want to become a Solution Architect and also want to create the artificially intelligent application.
 
 Currently, I am interested in cloud application architecture learning blockchain, learning basic to javascript.
 
