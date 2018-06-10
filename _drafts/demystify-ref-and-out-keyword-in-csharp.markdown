@@ -6,6 +6,7 @@ categories:
 tags:
 - c#
 - c#-basics
+background: "/uploads/c%23refout.jpg"
 layout: post
 ---
 
