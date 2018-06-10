@@ -7,14 +7,16 @@ tags:
 - c#
 - c#-basics
 background: "/uploads/c%23refout.jpg"
+when to use: https://stackoverflow.com/questions/1516876/when-to-use-ref-vs-out
+Field name: 
 layout: post
 ---
 
 In the C# world, the most commonly asked question in an interview, what is different between **ref**  and **out** keyword? In this article, we would understand what is exact difference between these two keywords. Let's start with basic of programming terms, there is a concept of **Pass by Value** and **Pass by Reference**.
 
-When a parameter is **passed by reference**, the **caller** and the **callee** use the **same variable** for the parameter. If the **callee modifies the parameter** **variable, the effect is visible to the caller's variable.**
+When a parameter is **passed by reference**, the **caller **and the **callee** use the **same variable** for the parameter. If the **callee modifies the parameter** **variable, the effect is visible to the caller's variable.**
 
-When a parameter is **passed by value**, the **caller** and **callee** have two independent variables with the same value. If the **callee modifies the parameter variable, the effect is not visible to the caller.**
+When a parameter is **passed by value**, the **caller** and **callee **have two independent variables with the same value. If the **callee modifies the parameter variable, the effect is not visible to the caller.**
 
 The ref and out keywords both use the concept of Pass by Reference with data, but with some compiler restrictions.
 
@@ -63,3 +65,5 @@ The **ref** and **out** keywords treated **same at compile time in IL code but d
 The error : "**Cannot define overloaded method 'AFunction' because it differs from another method only on ref and out**".
 
 There are some discussions over the internet that ref and out are same at compile time but different at run-time. Yes, you can say that ref and out declaration treated differently in compile time because you can see the restriction that forced by the compiler as above make difference between ref and out.
+
+Thanks for reading :)
