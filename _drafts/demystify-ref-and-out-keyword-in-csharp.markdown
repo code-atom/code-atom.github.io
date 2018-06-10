@@ -19,6 +19,25 @@ The ref and out keywords both use the concept of Pass by Reference with data, bu
 
 You can think ref keyword as two way where data passed from caller to callee and back while out keyword is a one way, it sends data from calle to caller and any data passed by a caller is discarded.
 
+    class Example {
+            public static void main(string[] args) {
+                int i = 10;
+                FunctionWithRef(ref i);
+                Console.WriteLine("The manipulated value of i {0}", i);
+                int j;
+                FunctionWithOut(out j);
+                Console.WriteLine("The manipulated value of j {0}", j);
+            }
+            
+            public static void FunctionWithRef(ref int number) {
+                number = number + 10;
+            }
+            
+            public static void FunctionWithOut(out int number){
+                number = number + 10;
+            }   
+    }
+
 **Restriction force by the compiler on ref keyword :-**
 
 * A variable must be initialized before a passing to function.
@@ -41,3 +60,5 @@ The **ref** and **out** keywords treated same at compile time in IL code but dif
     }
 
 The error : "**Cannot define overloaded method 'AFunction' because it differs from another method only on ref and out**".
+
+There are some discussions over the internet that ref and out are same at compile time but different at run-time. Yes, you can say that ref and out declaration treated differently in compile time because you can see the restriction that forced by the compiler as above make difference between ref and out.
