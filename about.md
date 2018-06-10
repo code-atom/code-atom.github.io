@@ -4,14 +4,14 @@ permalink: "/about"
 showNavBar: true
 layout: page
 subTitle: This is what I do.
-background: https://scontent.fixc2-1.fna.fbcdn.net/v/t1.0-9/25348636_1543958589030123_6945409443435432174_n.jpg?oh=138c6f8cb888376d806fdd49bea746c5&oe=5ABADFF5
+background: https://lh3.googleusercontent.com/F8Cm0v_BmMofLKDBHeeFpHCbMlGTk-LGdD-BP-OPD7aL473IuphjyBKk_H3LPa_-7pvDdX0SXQ_fjw=w1920-h1080-rw-no
 ---
 
 Hi, I am` Ankit Rana`, passionate developer, love to work in C# and javascript. 
 
 I am always interested in low-level application problem that related to application architecture and how to communicate with third-party services.
 
-I want to become a Solution Architecture and also want to create the artificially intelligent application.
+I want to become a Solution Architect and also want to create the artificially intelligent application.
 
 Currently, I am interested in cloud application architecture learning blockchain, learning basic to javascript.
 
