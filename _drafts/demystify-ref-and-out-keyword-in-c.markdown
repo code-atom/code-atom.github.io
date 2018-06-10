@@ -1,5 +1,5 @@
 ---
-title: Demystify ref and out keyword in C
+title: Demystify ref and out keyword in C#
 date: 2018-06-10 22:45:00 +05:30
 categories:
 - c#
