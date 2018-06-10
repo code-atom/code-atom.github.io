@@ -12,9 +12,9 @@ layout: post
 
 In the C# world, the most commonly asked question in an interview, what is different between **ref**  and **out** keyword? In this article, we would understand what is exact difference between these two keywords. Let's start with basic of programming terms, there is a concept of **Pass by Value** and **Pass by Reference**.
 
-When a parameter is **passed by reference**, the **caller **and the **callee** use the **same variable** for the parameter. If the **callee modifies the parameter** **variable, the effect is visible to the caller's variable.**
+When a parameter is **passed by reference**, the **caller** and the **callee** use the **same variable** for the parameter. If the **callee modifies the parameter** **variable, the effect is visible to the caller's variable.**
 
-When a parameter is **passed by value**, the **caller** and **callee **have two independent variables with the same value. If the **callee modifies the parameter variable, the effect is not visible to the caller.**
+When a parameter is **passed by value**, the **caller** and **callee** have two independent variables with the same value. If the **callee modifies the parameter variable, the effect is not visible to the caller.**
 
 The ref and out keywords both use the concept of Pass by Reference with data, but with some compiler restrictions.
 
