@@ -14,9 +14,9 @@ layout: post
 
 In the C# world, the most commonly asked question in an interview, what is different between **ref**  and **out** keyword? In this article, we would understand what is exact difference between these two keywords. Let's start with basic of programming terms, there is a concept of **Pass by Value** and **Pass by Reference**.
 
-When a parameter is **passed by reference**, the **caller **and the **callee** use the **same variable** for the parameter. If the **callee modifies the parameter** **variable, the effect is visible to the caller's variable.**
+When a parameter is **passed by reference**, the **caller** and the **callee** use the **same variable** for the parameter. If the **callee modifies the parameter** **variable, the effect is visible to the caller's variable.**
 
-When a parameter is **passed by value**, the **caller** and **callee **have two independent variables with the same value. If the **callee modifies the parameter variable, the effect is not visible to the caller.**
+When a parameter is **passed by value**, the **caller** and **callee** have two independent variables with the same value. If the **callee modifies the parameter variable, the effect is not visible to the caller.**
 
 The ref and out keywords both use the concept of Pass by Reference with data, but with some compiler restrictions.
 
@@ -41,13 +41,13 @@ You can think ref  keyword as two way where data passed from caller to callee an
             }   
     }
 
-**Restriction force by the compiler on ref keyword :-**
+**Restriction force by the compiler on ref keyword:-**
 
 * A variable must be initialized before a passing to function.
 
 * In argument list, the variable must use ref keyword.
 
-**Restriction force by the compiler on out keyword :-**
+**Restriction force by the compiler on out keyword:-**
 
 * A variable must be initialized inside the calle function before the returning to the caller function.
 
@@ -55,7 +55,7 @@ You can think ref  keyword as two way where data passed from caller to callee an
 
 The other common restriction is you can not use ref and out keyword with properties and indexers.
 
-The **ref** and **out** keywords treated **same at compile time in IL code but different at run-time.  The reason they are** treated the same at compile time is that their **method signatures are the same in MSIL** and this is why you **can't overload** them.
+The **ref** and **out** keywords treated **same at compile time in IL code but different at run-time. The reason they are** treated the same at compile time is that their **method signatures are the same in MSIL** and this is why you **can't overload** them.
 
     class Example { 
        public void AFunction(ref string name){ //This show error } 
