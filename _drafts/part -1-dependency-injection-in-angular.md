@@ -42,4 +42,24 @@ Let suppose we have Product class and each product has a base price and to calcu
    }
 }
 
-This class is tightly coupled with product service and make difficult for us to test. Now suppose this service communicate with backend server and fetch details back and forth. Basically, we are making our tests more brittle by adding an unexcepted dependency between the Product class and ProductService 
+This class is tightly coupled with product service and make difficult for us to test. Now suppose this service communicate with backend server and fetch details back and forth. Basically, we are making our tests more brittle by adding an unexcepted dependency between the Product class and ProductService that, in turn, depends on a database.
+
+class Product {
+   constructor(basePrice: number, service: ProductService) {
+    this.service= service;
+    this.price = basePrice;
+   }
+   price() {
+     return this.service.calculate(this.price);
+   }
+}
+
+Now when creating  a Product, the client class becomes responsible for deciding which concrete implementation of the ProductService is going to be given to the new instance.
+
+With that, we can make our tests a lot simpler by creating a mock version of the ProductService class.
+
+class MockProductService{
+  calculate(price: number) {
+    return price* 1.69;
+  }
+}
