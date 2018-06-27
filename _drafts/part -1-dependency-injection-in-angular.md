@@ -28,3 +28,18 @@ Inversion of control of DI invert the process of creating objects from your appl
 ![dependency.png](/uploads/DI.png)
 
 This diagram shows how angular another component to resolve their dependency in-app life cycle.
+
+Injection Example:-
+Let suppose we have Product class and each product has a base price and to calculate the actual price we rely on product service.
+
+ class Product {
+   constructor(basePrice: number) {
+    this.service= new ProductService();
+    this.price = basePrice;
+   }
+   price() {
+     return this.service.calculate(this.price);
+   }
+}
+
+This class is tightly coupled with product service and make difficult for us to test. Now suppose this service communicate with backend server and fetch details back and forth. Basically, we are making our tests more brittle by adding an unexcepted dependency between the Product class and ProductService 
