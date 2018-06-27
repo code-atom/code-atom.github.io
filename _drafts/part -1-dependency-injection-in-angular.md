@@ -63,3 +63,4 @@ class MockProductService{
     return price* 1.69;
   }
 }
+ And with this small change, we can tweak our test 
