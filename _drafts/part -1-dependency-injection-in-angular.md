@@ -1,6 +1,14 @@
 ---
 title: 'Part -1: Dependency Injection in Angular'
-date: 2018-06-27 00:00:00 +05:30
+date: 2018-06-26 00:00:00 +05:30
+categories:
+- Angular
+- DI
+tags:
+- Angular
+- Dependency-injection
+- DI
+layout: post
 ---
 
 In Angular, we already now that Angular have their own dependency injection system for creating the object of services/components and also resolve the dependency of creating the object. In this article, we will talk about how to configure a service in Angular-Dependency Injection System.
@@ -15,3 +23,5 @@ The DI relies on a principle of inversion of control.
 >  The Inversion of control principle is also called informally the "Hollywood principle" that is a reference to the Hollywood motto "don't call us, we 'll call you."
 
 Inversion of control of DI invert the process of creating objects from your application code, means no new and static method used to create an object. This supports the lossy coupling of application. DI  concentrate on abstraction rather than implementation. The lossy coupling of application makes code testable.
+
+![dependency.png](/uploads/DI.png)
