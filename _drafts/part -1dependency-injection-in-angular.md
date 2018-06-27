@@ -1,5 +1,6 @@
 ---
 title: 'Part -1: Dependency Injection in Angular'
+date: 2018-06-27 00:00:00 +05:30
 ---
 
 In Angular, we already now that Angular have their own dependency injection system for creating the object of services/components and also resolve the dependency of creating the object. In this article, we will talk about how to configure a service in Angular-Dependency Injection System.

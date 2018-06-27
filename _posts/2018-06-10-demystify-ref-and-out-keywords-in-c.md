@@ -1,5 +1,6 @@
 ---
 title: Demystify Ref and Out Keywords in C#
+date: 2018-06-10 00:00:00 +05:30
 ---
 
 In the C# world, the most commonly asked question in an interview, what is different between **ref**  and **out** keyword? In this article, we would understand what is exact difference between these two keywords. Let's start with basic of programming terms, there is a concept of Pass by Value and Pass by Reference.
