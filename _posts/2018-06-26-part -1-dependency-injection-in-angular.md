@@ -27,7 +27,9 @@ The DI relies on a principle of inversion of control.
 
 Inversion of control of DI invert the process of creating objects from your application code, means no new and static method used to create an object. This supports the lossy coupling of application. DI  concentrate on abstraction rather than implementation. The lossy coupling of application makes code testable.
 
-![dependency.png](/uploads/DI.png)
+<div class="container">
+ <img src="/uploads/DI.png" class="img" alt="dependency.png">
+</div>
 
 This diagram shows how angular another component to resolve their dependency in-app life cycle.
 
