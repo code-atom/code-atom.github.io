@@ -12,11 +12,11 @@ background: "/uploads/DI.png"
 layout: post
 ---
 
-In Angular, we already now that Angular have their own dependency injection system for creating the object of services/components and also resolve the dependency of creating the object. In this article, we will talk about how to configure a service in Angular-Dependency Injection System.
+In Angular, we already now that Angular have their own dependency injection system for creating the object of services/components and also resolve the dependency of creating the object. In this series of articles, we will talk about how to configure a service in Angular-Dependency Injection System.
 Before  we dive into the configuration of providers in DI system, let we first start learning about DI system
 
-> What is Dependency Injection?
-
+> What is Dependency Injection ?
+> <br/>
 > *In software engineering, dependency injection is a technique whereby one object (or static method) supplies the dependencies of another object.*
 
 The term dependency injection is used to describe both design pattern and also the specific implementation DI library that is built-in to Angular. The major benefits of using dependency injection are that the client component doesn't have to be aware of how to create the dependencies, all the component need to know is how to interact with those dependencies.
@@ -28,14 +28,14 @@ The DI relies on a principle of inversion of control.
 Inversion of control of DI invert the process of creating objects from your application code, means no new and static method used to create an object. This supports the lossy coupling of application. DI  concentrate on abstraction rather than implementation. The lossy coupling of application makes code testable.
 
 <div class="container">
- <img src="/uploads/DI.png" class="img" alt="dependency.png">
+ <img src="/uploads/DI.png" class="img" alt="dependency.png" style="width:inherit">
 </div>
 
-This diagram shows how angular another component to resolve their dependency in-app life cycle.
+This diagram shows how angular resolve dependency for other component in-app life cycle.
 
 **Injection Example:-**
 
-Let suppose we have Product class and each product has a base price and to calculate the actual price we rely on product service.
+Let suppose we have **Product** class and each product has a base price and to calculate the actual price we rely on **ProductService**.
 
 ~~~
  class Product {
@@ -49,7 +49,7 @@ Let suppose we have Product class and each product has a base price and to calcu
 }
 ~~~
 
-This class is tightly coupled with product service and make difficult for us to test. Now suppose this service communicate with backend server and fetch details back and forth. Basically, we are making our tests more brittle by adding an unexcepted dependency between the Product class and ProductService that, in turn, depends on a database.
+This class is tightly coupled with **ProductService** and make difficult for us to test. Now suppose **ProductService** communicate with backend server. Basically, we are making our tests more brittle by adding an unexcepted dependency between the **Product** class and **ProductService** that, in turn, depends on a database.
 ~~~
 class Product {
    constructor(basePrice: number, service: ProductService) {
@@ -62,9 +62,9 @@ class Product {
 }
 ~~~
 
-Now when creating a Product, the client class becomes responsible for deciding which concrete implementation of the ProductService is going to be given to the new instance.
+Now when creating a **Product**, the client class becomes responsible for deciding which concrete implementation of the **ProductService** is going to be given to the new instance.
 
-With that, we can make our tests a lot simpler by creating a mock version of the ProductService class.
+With that, we can make our tests a lot simpler by creating a mock version of the **ProductService** class.
 ~~~
 class MockProductService{
   calculate(price: number) {
