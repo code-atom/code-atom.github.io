@@ -30,7 +30,8 @@ Inversion of control of DI invert the process of creating objects from your appl
 
 This diagram shows how angular another component to resolve their dependency in-app life cycle.
 
-Injection Example:-
+**Injection Example:-**
+
 Let suppose we have Product class and each product has a base price and to calculate the actual price we rely on product service.
 
 ~~~
