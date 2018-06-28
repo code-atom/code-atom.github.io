@@ -54,7 +54,7 @@ class Product {
    }
 }
 
-Now when creating  a Product, the client class becomes responsible for deciding which concrete implementation of the ProductService is going to be given to the new instance.
+Now when creating a Product, the client class becomes responsible for deciding which concrete implementation of the ProductService is going to be given to the new instance.
 
 With that, we can make our tests a lot simpler by creating a mock version of the ProductService class.
 
@@ -63,4 +63,22 @@ class MockProductService{
     return price* 1.69;
   }
 }
- And with this small change, we can tweak our test 
+And with this small change, we can tweak our test slightly and get rid the backend call.
+
+let product;
+
+beforeEach(() => {
+  const service = new MockProductService();
+  product = new Product(service, 11);
+});
+
+describe('price', () => {
+ it('is calculated based on the basePrice', () => {
+  expect(product.price()).toBe(18.59);
+ });
+});
+
+We also get the bonus of having confidence that we're testing the Product class in isolation. That is, we're making sure that our class works with a predictable dependency.
+
+In this part, we describe the angular dependency and next part we will start with configure the provider and their different part of configuration and type of configuration for provider.
+ 
