@@ -32,7 +32,8 @@ This diagram shows how angular another component to resolve their dependency in-
 
 Injection Example:-
 Let suppose we have Product class and each product has a base price and to calculate the actual price we rely on product service.
-/**
+
+~~~
  class Product {
    constructor(basePrice: number) {
     this.service= new ProductService();
@@ -42,10 +43,10 @@ Let suppose we have Product class and each product has a base price and to calcu
      return this.service.calculate(this.price);
    }
 }
-**/
+~~~
 
 This class is tightly coupled with product service and make difficult for us to test. Now suppose this service communicate with backend server and fetch details back and forth. Basically, we are making our tests more brittle by adding an unexcepted dependency between the Product class and ProductService that, in turn, depends on a database.
-/**
+~~~
 class Product {
    constructor(basePrice: number, service: ProductService) {
     this.service= service;
@@ -55,21 +56,21 @@ class Product {
      return this.service.calculate(this.price);
    }
 }
-**/
+~~~
 
 Now when creating a Product, the client class becomes responsible for deciding which concrete implementation of the ProductService is going to be given to the new instance.
 
 With that, we can make our tests a lot simpler by creating a mock version of the ProductService class.
-/**
+~~~
 class MockProductService{
   calculate(price: number) {
     return price* 1.69;
   }
 }
-**/
+~~~
 And with this small change, we can tweak our test slightly and get rid the backend call.
 
-/**
+~~~
 let product;
 
 beforeEach(() => {
@@ -82,7 +83,7 @@ describe('price', () => {
   expect(product.price()).toBe(18.59);
  });
 });
-**/
+~~~
 
 We also get the bonus of having confidence that we're testing the Product class in isolation. That is, we're making sure that our class works with a predictable dependency.
 
