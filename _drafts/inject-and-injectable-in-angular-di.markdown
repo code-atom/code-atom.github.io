@@ -10,3 +10,4 @@ tags:
 layout: post
 ---
 
+@Inject and @Injectable are two decorators that used in Angular DI System, this decorator holds the metadata regarding class dependency. 
