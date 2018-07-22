@@ -10,7 +10,7 @@ tags:
 layout: post
 ---
 
-@Inject and @Injectable are two decorators in our Angular DI System. Each of these has their own use in Angular according to requirement.
+@Inject and @Injectable are two decorators in our Angular DI System. Each of these decorators has their own use in Angular according to requirement.
 
 @Injectable
 @Injectable is used to inject all required dependency for creating an object. There is a misconception about this decorator that if we create service, we should always need to declare the injectable decorator over the class.
