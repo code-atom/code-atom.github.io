@@ -1,5 +1,5 @@
 ---
-title: Components of Angular DI
+title: 'Part 2: Components of Angular DI'
 date: 2018-06-27 05:48:00 +05:30
 categories:
 - Angular
