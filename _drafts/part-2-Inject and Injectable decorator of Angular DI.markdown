@@ -7,6 +7,8 @@ tags:
 - Angular
 - DI
 - Decorators
+- "@Inject"
+- "@Injectable"
 layout: post
 ---
 
@@ -30,7 +32,27 @@ A @Inject decorator is used to injecting service with the specific token.
 @Injectable is used to inject all required dependency, for creating an object, by adding additional metadata in a declaration.
 
 There is a misconception about this decorator that if while creating service, we should always need to declare the injectable decorator over the service class. This is not mandatory, this is due to this [issue](https://github.com/angular/angular/issues/13820).
+You only need to add this decorator if service has any dependencies.
 
 If service has any dependencies, you should add @injectable decorator over service class and Angular DI automatically create an object.
 
-Injectable decorator 
+Injectable decorator adds metadata to all dependency by defining a single decorator instead of adding multiple @Inject decorators in a constructor.
+
+import { Inject } from  '@angular/core';
+
+class UserService{
+   constructor(@Inject(Http) private http: Http, @Inject(AuthService) private auth: AuthService){
+   }
+}
+Instead of this
+
+import { Injectable } from  '@angular/core';
+
+@Injectable()
+class UserService{
+   constructor(private http: Http, private auth: AuthService){
+   }
+}
+
+
+
