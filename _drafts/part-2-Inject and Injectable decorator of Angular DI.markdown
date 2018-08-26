@@ -26,6 +26,7 @@ Now Angular want to create your service and your service/s depend on another ser
 Now decorators come into a picture, they said if you want to resolve your service dependencies, please add me over the class definition, when Typescript compile me, I will add meta-data about the dependency of your services. Angular will read this metadata and resolve your dependencies. Metadata includes dependency token and according to a token, Angular DI retrieve their provider and create an object. 
 
 **@Inject**
+
 A @Inject decorator is used to injecting service with the specific token. @Inject is parameter decorator.
 
 Inject decorator takes token and add into metadata for Angular to read about dependency. This could (and will) get very messy when a component or service requires a lot of dependencies. As Angular supports resolving dependencies from the emitted metadata, there’s no need to use @Inject most of the time.
@@ -43,6 +44,7 @@ The reason we use @Inject is that we cannot use an InjectableToken as the type o
 
 
 **@Injectable**
+
 @Injectable is used to inject all required dependency, for creating an object, by adding additional metadata in a declaration.@Injectable is a class decorator.
 
 There is a misconception about this decorator that if while creating service, we should always need to declare the injectable decorator over the service class. This is not mandatory, this is due to this [issue](https://github.com/angular/angular/issues/13820).
@@ -71,6 +73,7 @@ class UserService{
 ~~~
 
 **Conclusion**
+
 Hopefully this post has given you some  insights into @Inject, @Injectable, tokens and providers.
 
 
