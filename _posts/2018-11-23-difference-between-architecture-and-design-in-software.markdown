@@ -1,5 +1,5 @@
 ---
-title: Difference between Architecture and Design in Software
+title: Architecture vs Design in Software
 date: 2018-11-23 07:25:00 +05:30
 categories:
 - architecture
