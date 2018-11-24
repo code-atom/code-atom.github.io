@@ -28,7 +28,7 @@ The architecture provides a high-level arrangement of components or modules. Whe
 
 Architecture support non-functional requirements (like logging, load balancing, fault tolerant, cloud supported, Testing approach, Documentation, Scalability, Security, Maintainability etc) and has to be review and approved by other architects. The design support functional requirement and the design changes are internal to component whereas Architecture changes refer to the architectural change
 
-![Untitled Diagram.png](/uploads/Untitled%20Diagram.png)
+<p class="text-center">![Untitled Diagram.png](/uploads/Untitled%20Diagram.png)</p>
 
 That is why we said that it is hard to change the architecture because our design components or modules depend on it and if we change the architecture we also need to change the components.
 
