@@ -6,6 +6,7 @@ categories:
 tags:
 - architechture
 - design
+background: 
 layout: post
 ---
 
@@ -15,7 +16,9 @@ Architecture is the logical implementation of Software.
 
 Design is the physical implementation of Software.
 
+<p class="text-center">
 ![Untitled Diagram.jpg](/uploads/Untitled%20Diagram.jpg)
+</p>
 
 The architecture describes what and where we need to do things whereas design illustrates how to do things.
 
