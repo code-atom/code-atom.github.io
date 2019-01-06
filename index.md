@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: homev2
 showNavBar: true
 ---
 
