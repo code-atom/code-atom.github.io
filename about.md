@@ -2,9 +2,9 @@
 title: About Me
 permalink: "/about"
 showNavBar: true
-layout: page
 subTitle: This is what I do.
 background: https://lh3.googleusercontent.com/F8Cm0v_BmMofLKDBHeeFpHCbMlGTk-LGdD-BP-OPD7aL473IuphjyBKk_H3LPa_-7pvDdX0SXQ_fjw=w1920-h1080-rw-no
+layout: default_extended
 ---
 
 Hi, I am` Ankit Rana`, passionate developer, love to work in C# and javascript. 
