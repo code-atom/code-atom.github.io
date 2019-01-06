@@ -7,7 +7,7 @@ tags:
 - architechture
 - design
 background: 
-layout: post
+layout: postv2
 ---
 
 We often use these two keywords in our daily work life “Design” and “Architecture”. But what is an actual difference in Design and Architecture?

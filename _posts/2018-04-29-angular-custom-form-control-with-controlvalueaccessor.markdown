@@ -6,7 +6,7 @@ categories:
 tags:
 - Angular
 background: "/uploads/arch-bridge-clouds-814499.jpg"
-layout: post
+layout: postv2
 ---
 
 Let suppose you want to create password component in which you want an option to hide/see password on eye-like button click. We see this type of component in many sites, the common one is bitbucket login page where you can see your enter password before submitting the form.

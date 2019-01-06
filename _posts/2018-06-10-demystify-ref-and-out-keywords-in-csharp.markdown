@@ -9,7 +9,7 @@ tags:
 background: "/uploads/c%23refout.jpg"
 when to use: https://stackoverflow.com/questions/1516876/when-to-use-ref-vs-out
 Field name: 
-layout: post
+layout: postv2
 ---
 
 In the C# world, the most commonly asked question in an interview, what is different between **ref**  and **out** keyword? In this article, we would understand what is exact difference between these two keywords. Let's start with basic of programming terms, there is a concept of **Pass by Value** and **Pass by Reference**.

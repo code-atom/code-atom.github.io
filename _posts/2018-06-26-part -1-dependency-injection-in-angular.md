@@ -9,7 +9,7 @@ tags:
 - Dependency-injection
 - DI
 background: "/uploads/DI.png"
-layout: post
+layout: postv2
 ---
 
 In Angular, we already now that Angular have their own dependency injection system for creating the object of services/components and also resolve the dependency of creating the object. In this series of articles, we will talk about how to configure a service in Angular-Dependency Injection System.

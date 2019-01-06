@@ -9,7 +9,7 @@ tags:
 - Decorators
 - "@Inject"
 - "@Injectable"
-layout: post
+layout: postv2
 ---
 
 @Inject and @Injectable are two decorators in Angular DI System. Each of these decorators has their own use in Angular according to requirement.

@@ -9,7 +9,7 @@ tags:
 - Content Security Policy
 background: http://www.hdnicewallpapers.com/Walls/Big/Owl/Baby_Child_of_Owl_Bird_Photo_Background.jpg
 subTitle: 
-layout: post
+layout: postv2
 ---
 
 **Prevent XSS Attacks using Content Security Policy**
