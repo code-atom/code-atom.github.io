@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: default_extended
+excerpt_separator: <!--more-->
 ---
 
 <div class="posts">
@@ -12,6 +13,9 @@ layout: default_extended
                     {{ post.title | escape }}
             </a>
             </h1>
+            <p>
+                {{ post.excerpt }}
+            </p>
             <p class="post-meta">Posted by
                 <a href="https://github.com/{{ site.github_username }}">
                     {{ site.github_username | escape }}
