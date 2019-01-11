@@ -6,9 +6,7 @@ categories:
 tags:
 - Angular
 - Angular-best-practices
-subTitle: 
-background: https://www.efrontlearning.com/blog/wp-content/uploads/2013/08/homepage-design-best-practices.jpg
-layout: postv2
+layout: post
 ---
 
 In angular, applications built with components, a component is as same as a controller in angular V1.x. The Component is the important building block of Angular App. Due to its importance, we must have to follow the best practices while creating a component in the app.

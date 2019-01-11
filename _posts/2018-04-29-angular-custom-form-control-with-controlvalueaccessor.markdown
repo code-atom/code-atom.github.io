@@ -5,8 +5,7 @@ categories:
 - Angular-form-api
 tags:
 - Angular
-background: "/uploads/arch-bridge-clouds-814499.jpg"
-layout: postv2
+layout: post
 ---
 
 Let suppose you want to create password component in which you want an option to hide/see password on eye-like button click. We see this type of component in many sites, the common one is bitbucket login page where you can see your enter password before submitting the form.
@@ -49,7 +48,7 @@ Two important methods of a form control:
 
 RegisterOnChange sends a callback function that is used to notify the update value of a control. The callback function provides update value back to form control. In our currentexample, you can see **pushChange(value: any)** is used to push new value to form control API.
 
-```
+```ts
 import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -63,29 +62,29 @@ multi: true,
 selector: 'app-password',
 templateUrl: './password.component.html',
 styleUrls: ['./password.component.css'],
-providers: [PASWORD_VALUE_ACCESSOR\]
+providers: [PASWORD_VALUE_ACCESSOR]
 })
 export class PasswordComponent implements ControlValueAccessor {
-show: boolean = false;
-onChange = (_: any) => { };
-onTouched = () => { };
-value: string = '';
-constructor() { }
+  show: boolean = false;
+  onChange = (_: any) => { };
+  onTouched = () => { };
+  value: string = '';
+  constructor() { }
 
-writeValue(value: any): void {
-this.value = value || '';
-}
+  writeValue(value: any): void {
+    this.value = value || '';
+  }
 
-pushChanges(value: any) {
-this.onChange(value);
-}
+  pushChanges(value: any) {
+    this.onChange(value);
+  }
 
-registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
-registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
+  registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
+  registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
 
-setDisabledState(isDisabled: boolean): void {
-}
+  setDisabledState(isDisabled: boolean): void {
+  }
 }
 ```
 
-This is it, now your custom component will easily communicate with Angular form.For better understanding please refer to[this post](https://blog.angularindepth.com/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms-93b9eee9ee83).
+This is it, now your custom component will easily communicate with Angular form.For better understanding please refer to [this post](https://blog.angularindepth.com/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms-93b9eee9ee83).

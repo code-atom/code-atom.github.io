@@ -6,8 +6,6 @@ categories:
 tags:
 - data structure
 - general
-subTitle: introduction about what  data structure is and what is ADT
-background: https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18838881.jpg
 layout: post
 ---
 

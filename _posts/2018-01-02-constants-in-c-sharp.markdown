@@ -1,31 +1,34 @@
 ---
 title: Constants in C#
-date: 2019-01-11 17:06:00 +05:30
+date: 2018-01-02 17:06:00 +05:30
 tags:
 - c#
 - c#-basics
-layout: postv2
+layout: post
 ---
 
 A constant is a static field whose value can never change. A constant is evaluated statically at compile time and the compiler literally substitutes its value whenever used (rather like a macro in C\+\+). A constant can be any of the built-in numeric types, bool, char, string, or an enum type.Any reference type excepted string can not be assigned to constant. A constant is declared with the const keyword and must be initialized with a value. Let take an example to explain above lines:-
 As we said compiler literally substitutes its values whenever used.
+
 In C# implementation
+
+```csharp
 using System;
-```
 public class Program
 {
-public const string CONSTANTSTR = "replaceableString";
-public static void main(string\[\] args)
-{
-string _constantValue = Program.CONSTANTSTR;
-Console.WriteLine(_constantValue);
-}
+    public const string CONSTANTSTR = "replaceableString";
+    public static void main(string[] args)
+    {
+        string _constantValue = Program.CONSTANTSTR;
+        Console.WriteLine(_constantValue);
+    }
 }
 ```
 after compiling, MSIL output:
-```
+
+```csharp
 .class public auto ansi beforefieldinit Program
-extends \[mscorlib\]System.Object
+extends [mscorlib]System.Object
 {
 // Fields (Constants that we declared)
 .field public static literal string CONSTANTSTR = "replaceableString"

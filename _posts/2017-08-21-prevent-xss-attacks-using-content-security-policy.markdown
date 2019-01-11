@@ -7,9 +7,7 @@ tags:
 - Xss Attack
 - Xss Prevention
 - Content Security Policy
-background: http://www.hdnicewallpapers.com/Walls/Big/Owl/Baby_Child_of_Owl_Bird_Photo_Background.jpg
-subTitle: 
-layout: postv2
+layout: post
 ---
 
 **Prevent XSS Attacks using Content Security Policy**
