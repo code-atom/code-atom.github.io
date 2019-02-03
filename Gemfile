@@ -28,6 +28,7 @@ group :jekyll_plugins do
   gem 'jekyll-admin'
   gem 'redcarpet'
   gem 'rouge'
+  gem "rack", ">= 1.6.11"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
