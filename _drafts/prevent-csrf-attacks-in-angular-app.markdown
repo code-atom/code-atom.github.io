@@ -26,7 +26,8 @@ To prevent this, the application must ensure that a user request originates from
 
 **Client-side**
 HttpClient supports a common mechanism used to prevent XSRF attacks. When performing HTTP requests, an interceptor reads a token from a cookie, by default XSRF-TOKEN, and sets it as an HTTP header, X-XSRF-TOKEN. Since only code that runs on your domain could read the cookie, the backend can be certain that the HTTP request came from your client application and not an attacker.
-``
+
+```ts
 imports: [
   HttpClientModule,
   HttpClientXsrfModule.withOptions({
@@ -34,21 +35,22 @@ imports: [
     headerName: 'X-XSRF-TOKEN',
   }),
 ]
-``
+```
 
 **Server Side**
 In Asp.net's core application, we need to add AntiForgery services in application DI.
 
-``
+```cs
 public void ConfigureServices(IServiceCollection services)
 {
       services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
 }
-``
+```
 
 After that, we need to assign an anti-forgery cookie to request using middleware, that we need to validate on every modification endpoint.
 
-``app.Use(next => context =>
+```cs
+app.Use(next => context =>
             {
                 if (string.Equals(context.Request.Path.Value, "/", StringComparison.OrdinalIgnoreCase) ||
                     string.Equals(context.Request.Path.Value, "/index.html", StringComparison.OrdinalIgnoreCase))
@@ -60,6 +62,6 @@ After that, we need to assign an anti-forgery cookie to request using middleware
 
                 return next(context);
             });
- ``
+ ```
 
 Now Anti-forgery mechanisms configure, we only need to add ValidateAntiForgeryAttributes on our modification endpoint.
