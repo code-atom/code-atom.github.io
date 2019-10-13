@@ -43,7 +43,7 @@ In Asp.net's core application, we need to add AntiForgery services in applicatio
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {
-      services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
+    services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
 }
 ```
 
@@ -51,17 +51,17 @@ After that, we need to assign an anti-forgery cookie to request using middleware
 
 ```cs
 app.Use(next => context =>
-            {
-                if (string.Equals(context.Request.Path.Value, "/", StringComparison.OrdinalIgnoreCase) ||
-                    string.Equals(context.Request.Path.Value, "/index.html", StringComparison.OrdinalIgnoreCase))
-                {
-                    var tokens = antiforgery.GetAndStoreTokens(context);
-                    context.Response.Cookies.Append("X-XSRF-COOKIE", tokens.RequestToken,
-                        new CookieOptions() {HttpOnly = false});
-                }
+{
+    if (string.Equals(context.Request.Path.Value, "/", StringComparison.OrdinalIgnoreCase) ||
+        string.Equals(context.Request.Path.Value, "/index.html", StringComparison.OrdinalIgnoreCase))
+    {
+        var tokens = antiforgery.GetAndStoreTokens(context);
+        context.Response.Cookies.Append("X-XSRF-COOKIE", tokens.RequestToken,
+            new CookieOptions() {HttpOnly = false});
+    }
 
-                return next(context);
-            });
+    return next(context);
+});
  ```
 
 Now Anti-forgery mechanisms configure, we only need to add ValidateAntiForgeryAttributes on our modification endpoint.
