@@ -19,8 +19,26 @@ But wait for a second, here attacker know to exploit your bank cookie from their
 They used this code in their site, which you open by-chance or get clickbait
 
 # How to protect our application CSRF protected? 
+
 In a common anti-XSRF technique, the application server sends a randomly generated authentication token in a cookie. The client code reads the cookie and adds a custom request header with the token in all subsequent requests. The server compares the received cookie value to the request header value and rejects the request if the values are missing or don't match.
 This technique is effective because all browsers implement the same-origin policy. Only code from the website on which cookies are set can read the cookies from that site and set custom headers on requests to that site. That means only your application can read this cookie token and set the custom header. The malicious code on evil.com can't.
 To prevent this, the application must ensure that a user request originates from the real application, not from a different site. The server and client must cooperate to thwart this attack.
+
+Client-side:
+HttpClient supports a common mechanism used to prevent XSRF attacks. When performing HTTP requests, an interceptor reads a token from a cookie, by default XSRF-TOKEN, and sets it as an HTTP header, X-XSRF-TOKEN. Since only code that runs on your domain could read the cookie, the backend can be certain that the HTTP request came from your client application and not an attacker.
+`imports: [
+  HttpClientModule,
+  HttpClientXsrfModule.withOptions({
+    cookieName: 'X-XSRF-COOKIE',
+    headerName: 'X-XSRF-TOKEN',
+  }),
+]`
+Server Side:
+In Asp.net's core application, we need to add AntiForgery services in application DI.
+
+`public void ConfigureServices(IServiceCollection services)
+{
+      services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
+}`
 
 
