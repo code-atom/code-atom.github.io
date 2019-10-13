@@ -25,6 +25,7 @@ This technique is effective because all browsers implement the same-origin polic
 To prevent this, the application must ensure that a user request originates from the real application, not from a different site. The server and client must cooperate to thwart this attack.
 
 **Client-side**
+
 HttpClient supports a common mechanism used to prevent XSRF attacks. When performing HTTP requests, an interceptor reads a token from a cookie, by default XSRF-TOKEN, and sets it as an HTTP header, X-XSRF-TOKEN. Since only code that runs on your domain could read the cookie, the backend can be certain that the HTTP request came from your client application and not an attacker.
 
 ```ts
@@ -38,6 +39,7 @@ imports: [
 ```
 
 **Server Side**
+
 In Asp.net's core application, we need to add AntiForgery services in application DI.
 
 ```cs
