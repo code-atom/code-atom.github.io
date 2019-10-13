@@ -64,4 +64,4 @@ app.Use(next => context =>
 });
  ```
 
-Now Anti-forgery mechanisms configure, we only need to add ValidateAntiForgeryAttributes on our modification endpoint.
+Now Anti-forgery mechanisms configure, we only need to add ***ValidateAntiForgeryAttributes*** on our modification endpoint.
