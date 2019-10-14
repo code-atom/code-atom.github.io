@@ -18,7 +18,7 @@ But we provide username/password only once and after we don’t need to provide 
 But wait for a second, here attacker know to exploit your bank cookie from their site. 
 They used this code in their site, which you open by-chance or get clickbait
 
-# How to protect our application CSRF protected? 
+# How to make application CSRF protected? 
 
 In a common anti-XSRF technique, the application server sends a randomly generated authentication token in a cookie. The client code reads the cookie and adds a custom request header with the token in all subsequent requests. The server compares the received cookie value to the request header value and rejects the request if the values are missing or don't match.
 This technique is effective because all browsers implement the same-origin policy. Only code from the website on which cookies are set can read the cookies from that site and set custom headers on requests to that site. That means only your application can read this cookie token and set the custom header. The malicious code on evil.com can't.
