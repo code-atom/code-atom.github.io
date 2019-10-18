@@ -17,6 +17,17 @@ But we provide username/password only once and after we don’t need to provide 
 
 But wait for a second, here attacker know to exploit your bank cookie from their site. 
 They used this code in their site, which you open by-chance or get clickbait
+```html
+<form id="csrf_form" action="http://good-banking-site.com/api/account" method="post">
+    <input type="hidden" name="Transaction" value="withdraw">
+    <input type="hidden" name="Amount" value="1000000">
+    <input type="submit" value="Click to collect your prize!">
+</form>
+<script>
+     document.getElementById('csrf_form').submit();
+</script>
+```
+
 
 # How to make application CSRF protected? 
 
