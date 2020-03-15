@@ -13,7 +13,7 @@ The article is all about to demonstrate how we can use the existing functionalit
 
 Floatable panels on the right side of the application over existing pages. The requirement is open panels in the existing route and re-use panels in various primary routes.
 
-The components required for creating routable modal panel are following:-
+The components required for creating a routable modal panel are the following:-
 
 * Named Router Outlet
 
@@ -23,13 +23,13 @@ The components required for creating routable modal panel are following:-
 
 * Add Bootstrap Modal CSS
 
-**Named Router Outlet**: We need to create a panel named router outlet for open floatable panel on any route. Basically we use auxiliary route to making the floatable panel available to any route in application.
+**Named Router Outlet**: We need to create a panel named router outlet for an open floatable panel on any route. We use the auxiliary route to making the floatable panel available to any route in the application.
 
-Add the panel router outlet in app component to make available to all routes.
+Add the panel router outlet in-app component to make available to all routes.
 
 `<router-outlet name="panel"></router-outlet>`
 
-**Panel Container** : Panel Container Component contain backdrop and router outlet for making it routable.
+**Panel Container** : Panel Container Component contains a backdrop and router outlet for making it routable.
 ```ts
 @Component({
   selector: 'app-panels',
@@ -95,7 +95,7 @@ export const routes: Routes = [
 ````
 Register the routing configuration in RouterModule.
 
-**Add Bootstrap Model CSS**: To provide the transition and placement of panel is done by override existing bootstrap.
+**Add Bootstrap Model CSS**: To provide the transition and placement of the panel is done by override existing bootstrap.
 
 ```css
 .modal-dialog.panel-right {
@@ -136,5 +136,4 @@ Register the routing configuration in RouterModule.
 ```
 
 <a href="https://stackblitz.com/edit/router-panels">Demo Link</a>
-
 
