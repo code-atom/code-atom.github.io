@@ -30,44 +30,110 @@ Add the panel router outlet in app component to make available to all routes.
 
 **Panel Container** : Panel Container Component contain backdrop and router outlet for making it routable.
 ```
-    @Component({
-          selector: 'app-panels',
-          templateUrl: './panels.component.html',
-          styleUrls: ['./panels.component.css']
-        })
-        export class PanelsComponent implements OnInit, AfterViewInit, OnDestroy {
-        
-         show = false;
-      private renderer: Renderer2;
-      constructor(private renderFactory: RendererFactory2) {
-        this.renderer = this.renderFactory.createRenderer(null, null);
-      }
-    
-      ngOnInit() {
+@Component({
+  selector: 'app-panels',
+  template: `  
+    <div class="modal-backdrop fade" [class.show]="show"></div>
+    <div class="modal d-block fade " [class.show]="show" tabindex="-1" role="dialog" aria-labelledby="modalIdLabel">
+      <div role="document" class="modal-dialog panel-right">
+        <div class="modal-content">
+          <div class="container">
+            <router-outlet #outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+})
+export class PanelsComponent implements OnInit, AfterViewInit, OnDestroy {
+
+    show = false;
+    private renderer: Renderer2;
+    constructor(private renderFactory: RendererFactory2) {
+    this.renderer = this.renderFactory.createRenderer(null, null);
+    }
+
+    ngOnInit() {
         this.renderer.addClass(this.body, "modal-open");
-        this.onInit();
-      }
-    
-      ngOnDestroy(): void {
+    }
+
+    ngOnDestroy(): void {
         this.renderer.removeClass(this.body, "modal-open");
-        this.onDestroy();
-      }
-    
-      ngAfterViewInit(): void {
+    }
+
+    ngAfterViewInit(): void {
         setTimeout(() => (this.show = true), 100);
-      }
-    
-      private get body() {
+    }
+
+    private get body() {
         return document.getElementsByTagName("body")[0];
-      }
-        
-        
-      close() {
-            this.show = false;
-            setTimeout(() => this.router.navigate([{ outlets: { panel: null } }]), 100);
-          }
-        }
+    }
+
+
+    close() {
+        this.show = false;
+        setTimeout(() => this.router.navigate([{ outlets: { panel: null } }]), 100);
+    }
+}
 ```
 **Panel Routing Configuration**: Add Panel Routing configuration in router configuration.
+```
+export const routes: Routes = [
+  {
+     path: 'panel',
+     component: PanelsComponent,
+     outlet: 'panel',
+     children: [
+       {
+         path: '',
+         component: DemoPanelComponent
+       }
+     ]
+  }
+]
+````
+Register the routing configuration in RouterModule.
 
 **Add Bootstrap Model CSS**: To provide the transition and placement of panel is done by override existing bootstrap.
+
+```
+.modal-dialog.panel-right {
+	 position: fixed !important;
+	 left: auto;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 margin: auto !important;
+	 width: 320px !important;
+	 height: 100%;
+	 -webkit-transform: translate3d(0%, 0, 0) !important;
+	 -ms-transform: translate3d(0%, 0, 0) !important;
+	 -o-transform: translate3d(0%, 0, 0) !important;
+	 transform: translate3d(0%, 0, 0) !important;
+}
+ .modal-dialog.panel-right .modal-content {
+	 height: 100%;
+	 overflow-y: auto;
+	 border-top-right-radius: 0px;
+	 border-bottom-right-radius: 0px;
+}
+ .modal-dialog.panel-right .modal-body {
+	 padding: 15px 15px 80px;
+}
+/*Right*/
+ .modal.fade .modal-dialog.panel-right {
+	 right: -320px;
+	 -webkit-transition: opacity 0.3s linear, right 400ms ease-in-out !important;
+	 -moz-transition: opacity 0.3s linear, right 400ms ease-in-out !important;
+	 -o-transition: opacity 0.3s linear, right 400ms ease-in-out !important;
+	 transition: opacity 0.3s linear, right 400ms ease-in-out !important;
+}
+ .modal.fade.show .modal-dialog.panel-right {
+	 right: 0;
+}
+ 
+```
+
+<iframe href="https://stackblitz.com/edit/router-panels"></iframe>
+
+
