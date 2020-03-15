@@ -1,6 +1,12 @@
 ---
 title: Angular Routable Modal Panel
 date: 2020-03-15 22:26:00 +05:30
+categories:
+- Angular
+tags:
+- Angular
+- general
+layout: post
 ---
 
 The article is all about to demonstrate how we can use the existing functionality of a router to open modal or panels in angular application. Recently I am working on a new project where I need to open floatable panels in the application.
