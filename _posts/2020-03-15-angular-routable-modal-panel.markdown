@@ -30,7 +30,7 @@ Add the panel router outlet in app component to make available to all routes.
 `<router-outlet name="panel"></router-outlet>`
 
 **Panel Container** : Panel Container Component contain backdrop and router outlet for making it routable.
-```
+```ts
 @Component({
   selector: 'app-panels',
   template: `  
@@ -78,7 +78,7 @@ export class PanelsComponent implements OnInit, AfterViewInit, OnDestroy {
 }
 ```
 **Panel Routing Configuration**: Add Panel Routing configuration in router configuration.
-```
+```ts
 export const routes: Routes = [
   {
      path: 'panel',
@@ -97,7 +97,7 @@ Register the routing configuration in RouterModule.
 
 **Add Bootstrap Model CSS**: To provide the transition and placement of panel is done by override existing bootstrap.
 
-```
+```css
 .modal-dialog.panel-right {
 	 position: fixed !important;
 	 left: auto;
