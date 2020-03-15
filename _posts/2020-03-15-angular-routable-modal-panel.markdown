@@ -135,6 +135,6 @@ Register the routing configuration in RouterModule.
  
 ```
 
-Demo Link: https://stackblitz.com/edit/router-panels
+<a href="https://stackblitz.com/edit/router-panels">Demo Link</a>
 
 
