@@ -134,6 +134,6 @@ Register the routing configuration in RouterModule.
  
 ```
 
-<iframe href="https://stackblitz.com/edit/router-panels"></iframe>
+<iframe src="https://stackblitz.com/edit/router-panels"></iframe>
 
 
