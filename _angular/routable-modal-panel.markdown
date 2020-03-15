@@ -29,9 +29,45 @@ Add the panel router outlet in app component to make available to all routes.
 `<router-outlet name="panel"></router-outlet>`
 
 **Panel Container** : Panel Container Component contain backdrop and router outlet for making it routable.
-
-https://stackblitz.com/edit/router-panels?embed=1&file=src/app/panels/panels.component.ts&hideExplorer=1&hideNavigation=1&view=editor
-
+```
+    @Component({
+          selector: 'app-panels',
+          templateUrl: './panels.component.html',
+          styleUrls: ['./panels.component.css']
+        })
+        export class PanelsComponent implements OnInit, AfterViewInit, OnDestroy {
+        
+         show = false;
+      private renderer: Renderer2;
+      constructor(private renderFactory: RendererFactory2) {
+        this.renderer = this.renderFactory.createRenderer(null, null);
+      }
+    
+      ngOnInit() {
+        this.renderer.addClass(this.body, "modal-open");
+        this.onInit();
+      }
+    
+      ngOnDestroy(): void {
+        this.renderer.removeClass(this.body, "modal-open");
+        this.onDestroy();
+      }
+    
+      ngAfterViewInit(): void {
+        setTimeout(() => (this.show = true), 100);
+      }
+    
+      private get body() {
+        return document.getElementsByTagName("body")[0];
+      }
+        
+        
+      close() {
+            this.show = false;
+            setTimeout(() => this.router.navigate([{ outlets: { panel: null } }]), 100);
+          }
+        }
+```
 **Panel Routing Configuration**: Add Panel Routing configuration in router configuration.
 
 **Add Bootstrap Model CSS**: To provide the transition and placement of panel is done by override existing bootstrap.
