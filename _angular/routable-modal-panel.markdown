@@ -24,9 +24,13 @@ The components required for creating routable modal panel are following:-
 
 **Named Router Outlet**: We need to create a panel named router outlet for open floatable panel on any route. Basically we use auxiliary route to making the floatable panel available to any route in application.
 
-Add the panel router outlet in app component to make available to root
+Add the panel router outlet in app component to make available to all routes.
+
+`<router-outlet name="panel"></router-outlet>`
 
 **Panel Container** : Panel Container Component contain backdrop and router outlet for making it routable.
+
+https://stackblitz.com/edit/router-panels?embed=1&file=src/app/panels/panels.component.ts&hideExplorer=1&hideNavigation=1&view=editor
 
 **Panel Routing Configuration**: Add Panel Routing configuration in router configuration.
 
