@@ -27,27 +27,34 @@ First, you need to install these two packages:
 
 Next step, retrieve openid-configuration of Identity Server and you can get it by is OpenID Connect Discovery endpoint. Now why we need that because it will contain JSON Web Key Set containing public key(s) that can be used to verify the token signature.
 
-    var authorityEndpoint = "https://demo.identityserver.io/";
-    var openIdConfigurationEndpoint = $"{authorityEndpoint}.well-known/openid-configuration";
-    IConfigurationManager<OpenIdConnectConfiguration> configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(openIdConfigurationEndpoint, new OpenIdConnectConfigurationRetriever());
-     OpenIdConnectConfiguration openIdConfig = await configurationManager.GetConfigurationAsync(CancellationToken.None);
+```
+var authorityEndpoint = "https://demo.identityserver.io/";
+var openIdConfigurationEndpoint = $"{authorityEndpoint}.well-known/openid-configuration";
+IConfigurationManager<OpenIdConnectConfiguration> configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(openIdConfigurationEndpoint, new OpenIdConnectConfigurationRetriever());
+OpenIdConnectConfiguration openIdConfig = await configurationManager.GetConfigurationAsync(CancellationToken.None);
+```
 
 Next up we need to configure the token validation parameters. I specify the issuer and audience(s) and also tell it to use the signing keys - i.e. the public key(s) - which were downloaded above.
 
-    TokenValidationParameters validationParameters = new TokenValidationParameters
-        {
-            ValidIssuer = auth0Domain,
-            ValidAudiences = new[] { "https://demo.identityserver.io/resources" },
-            IssuerSigningKeys = openIdConfig.SigningKeys
-        };
-    
-    With that in place, all you need to do is validate the token:
-    
-    ```
-        SecurityToken validatedToken;
-        JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-        var user = handler.ValidateToken("eyJhbGciOi.....", validationParameters, out validatedToken);
+```
+TokenValidationParameters validationParameters = new TokenValidationParameters
+{
+    ValidIssuer = auth0Domain,
+    ValidAudiences = new[] { "https://demo.identityserver.io/resources" },
+    IssuerSigningKeys = openIdConfig.SigningKeys
+};
+```
+
+With that in place, all you need to do is validate the token:
+   
+```
+SecurityToken validatedToken;
+JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+var user = handler.ValidateToken("eyJhbGciOi.....", validationParameters, out validatedToken);
+```
 
 ValidateToken will return a ClaimsPrincipal which will contain all the claims from the JSON Web Token. So for example, to get the user’s ID, we can query the NameIdentifier claim:
 
-        Console.WriteLine($"Token is validated. User Id {user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value}");
+```
+Console.WriteLine($"Token is validated. User Id {user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value}");
+```
