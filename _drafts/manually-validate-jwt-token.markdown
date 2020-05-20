@@ -3,10 +3,13 @@ title: Manually Validate JWT Token
 date: 2020-05-19 22:31:00 +05:30
 categories:
 - c#
+- Security
+- jwt
 tags:
 - c#
 - jwt
 - security
+Field name: 
 layout: post
 ---
 
@@ -18,7 +21,7 @@ JWT token is a way for securely transmitting information between parties as a JS
 
 JWT token basic focus on authenticity and integrity of information exchange between parties mean token must be issued from valid trust source and their containing data must be non-temper. 
 
-First you need to install these two packages:
+First, you need to install these two packages:
 Install-Package System.IdentityModel.Tokens.Jwt
 Install-Package Microsoft.IdentityModel.Protocols.OpenIdConnect
 
@@ -48,7 +51,6 @@ ValidateToken will return a ClaimsPrincipal which will contain all the claims fr
 So for example, to get the user’s ID, we can query the NameIdentifier claim:
 
 Console.WriteLine($"Token is validated. User Id {user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value}");
-
 
 
 
