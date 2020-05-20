@@ -27,32 +27,32 @@ First, you need to install these two packages:
 
 The first thing is to download the OIDC Configuration from the OpenID Connect Discovery endpoint. This will contain (among other things) the JSON Web Key Set containing the public key(s) that can be used to verify the token signature.
 
-```
-IConfigurationManager<OpenIdConnectConfiguration> configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>($"{auth0Domain}.well-known/openid-configuration", new OpenIdConnectConfigurationRetriever());
+``` csharp
+var openIdConfigurationEndpoint = $"{auth0Domain}.well-known/openid-configuration";
+IConfigurationManager<OpenIdConnectConfiguration> configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(openIdConfigurationEndpoint, new OpenIdConnectConfigurationRetriever());
 OpenIdConnectConfiguration openIdConfig = await configurationManager.GetConfigurationAsync(CancellationToken.None);
 ```
 
 Next up we need to configure the token validation parameters. I specify the issuer and audience(s) and also tell it to use the signing keys - i.e. the public key(s) - which were downloaded above.
 
-```
-TokenValidationParameters validationParameters =
-new TokenValidationParameters
+``` csharp
+TokenValidationParameters validationParameters = new TokenValidationParameters
 {
-ValidIssuer = auth0Domain,
-ValidAudiences = new\[\] { auth0Audience },
-IssuerSigningKeys = openIdConfig.SigningKeys
+    ValidIssuer = auth0Domain,
+    ValidAudiences = new\[\] { auth0Audience },
+    IssuerSigningKeys = openIdConfig.SigningKeys
 };
 ```
 
 With that in place, all you need to do is validate the token:
-
-```
+ 
+``` csharp
 SecurityToken validatedToken;
 JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
 var user = handler.ValidateToken("eyJhbGciOi.....", validationParameters, out validatedToken);
-ValidateToken will return a ClaimsPrincipal which will contain all the claims from the JSON Web Token.
 ```
-So for example, to get the user’s ID, we can query the NameIdentifier claim:
+
+ValidateToken will return a ClaimsPrincipal which will contain all the claims from the JSON Web Token.So for example, to get the user’s ID, we can query the NameIdentifier claim:
 
 ``` csharp
 Console.WriteLine($"Token is validated. User Id {user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value}");
