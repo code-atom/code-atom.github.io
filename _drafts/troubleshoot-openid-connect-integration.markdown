@@ -1,6 +1,14 @@
 ---
 title: Troubleshoot OpenID Connect Integration
 date: 2020-05-26 20:22:00 +05:30
+categories:
+- Identity Server
+- Troubleshooting
+tags:
+- troubleshooting
+- openid-connect
+- identity sevrer
+layout: post
 ---
 
 In this post, I gone discuss about  basic  troubleshooting  steps or checkpoints to debug  the  OpenIDConnect integration of Identity Server with their consuming application. As you know, In  Identity Server 4, we basically support  only two types of  integration:
