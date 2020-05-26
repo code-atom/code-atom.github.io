@@ -11,7 +11,7 @@ tags:
 layout: post
 ---
 
-In this post, I gone discuss about  basic  troubleshooting  steps or checkpoints to debug  the  OpenIDConnect integration of Identity Server with their consuming application. As you know, In  Identity Server 4, we basically support  only two types of  integration:
+In this post, I gone discuss about  basic  troubleshooting  steps or checkpoints to the  OpenID-Connect integration of Identity Server with their consuming application. As you know, In  Identity Server 4, we basically support  only two types of  integration:
 
 * Front-Channel  Login (aka Passive mode include  Hybrid, Authorization Code, Implicit)
 
@@ -27,7 +27,25 @@ In front channel login integration, you may use  any available  integration flow
 
 * RedirectUrls
 
-* ResponseType
+* ResponseType\
+       **Grant Type Flow
+**\
+  	**Authorization Code Flow = 0**\
+  		ResponseType: "code"
+\
+  	**Implicit Flow = 1**
+\
+  		ResponseType: "id_token"
+\
+  		ResponseType: "id_token token"
+\
+  	**Hybrid Flow** = 2
+\
+  		ResponseType: "code id_token",
+\
+  		ResponseType: "code token"
+\
+  		ResponseType: "code id_token token"
 
 * Client Secret 
 
