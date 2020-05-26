@@ -47,9 +47,11 @@ In front channel login integration, you may use  any available  integration flow
 \
   		ResponseType: "code id_token token"
 
-* Client Secret 
+* Client Secret (Required if code is provided in response type)
 
 ### Back channel Login Integration troubleshooting
+
+It is simple to troubleshoot, because in this we need to verify clientid, client secret and scopes and make the scopes that used in this integration must belongs to API Resource. Identity Resources are not used in this integration because in this secnario there is no acitve user present. It's basically used for service to service trusted communication.
 
 * ClientId
 
