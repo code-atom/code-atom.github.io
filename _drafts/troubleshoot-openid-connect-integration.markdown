@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot OpenID Connect Integration
+title: Troubleshoot Identity Server Integration
 date: 2020-05-26 20:22:00 +05:30
 categories:
 - Identity Server
