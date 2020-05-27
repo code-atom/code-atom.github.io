@@ -27,24 +27,15 @@ In front channel login integration, you may use  any available  integration flow
 
 * RedirectUrls
 
-* ResponseType\
-       **Grant Type Flow
-**\
-  	**Authorization Code Flow = 0**\
+* ResponseType
+  	**Authorization Code Flow = 0**
   		ResponseType: "code"
-\
   	**Implicit Flow = 1**
-\
   		ResponseType: "id_token"
-\
   		ResponseType: "id_token token"
-\
   	**Hybrid Flow** = 2
-\
   		ResponseType: "code id_token",
-\
   		ResponseType: "code token"
-\
   		ResponseType: "code id_token token"
 
 * Client Secret (Required if code is provided in response type)
