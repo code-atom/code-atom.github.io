@@ -6,6 +6,8 @@ categories:
 tags:
 - Angular
 - RxJs
+Field name: 
+layout: post
 ---
 
 I going to share with you, Long press directive implementation in RxJS. In this implementation, we will start the emitting Output event, when the user presses the mouse button for a specified threshold limit.
