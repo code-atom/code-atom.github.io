@@ -12,7 +12,7 @@ layout: post
 ---
 
 Hi, this is Azure Journey, a new blog series related to Azure Cloud and its services.
-This is the first post in the series. In this, we will set up CI\\CD Pipeline using GitHub Actions to implement continuous deployment in Azure App Services.
+This is the first post in the series. In this, we will set up CI\CD Pipeline using GitHub Actions to implement continuous deployment in Azure App Services.
 
 ## Prerequisite:
 * GitHub Repository.
