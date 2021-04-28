@@ -21,3 +21,7 @@ This is the first post in the series. In this, we will set up CI\\CD Pipeline us
 ## Create an App Service
 First, we need to create an Azure App Service Plan, as Azure App Services exists inside an Azure App Service Plan.
 
+
+# Configure GitHub Actions using Azure App Service
+
+
