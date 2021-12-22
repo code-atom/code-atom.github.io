@@ -8,24 +8,27 @@ tags:
 layout: post
 ---
 
-
 ## **Motivation**
 
-- Safe retry mechanism for non-idempotent method.
+* Safe retry mechanism for non-idempotent method.
 
 In general, when you try to send a request to a server and don’t get any response, there are two possibilities.
 
-- In one case, your device is incapable to connect with the server due to a network issue.
-- In the second case, your device can connect with a server but does not get any response from a server.
+* In one case, your device is incapable to connect with the server due to a network issue.
+
+* In the second case, your device can connect with a server but does not get any response from a server.
 
 The client is incapable to differentiate between these two cases because a client does not get any response from a server.
 
-**Compare the above two cases with the idempotent and non-idempotent method**
+**Compare retry the above two cases with the idempotent and non-idempotent method**
 
-- With the idempotent resource method (Ex: [GET]: Retrieving customers list) :
-    - In both cases, if the client requests the idempotent method, in that case, we do not need to worry about it.
-- With the non-idempotent resource method(Ex: [POST]: Intiaite payment) :
-    - In both cases, if the client request the non-idempotent method, and the client retries the method again, it will cause duplication on the server.
+* With the idempotent resource method (Ex: \[GET\]: Retrieving customers list) :
+
+  * In both cases, if the client requests the idempotent method, in that case, we do not need to worry about it.
+
+* With the non-idempotent resource method(Ex: \[POST\]: Intiaite payment) :
+
+  * In both cases, if the client request the non-idempotent method, and the client retries the method again, it will cause duplication on the server.
 
 ## Goal
 
