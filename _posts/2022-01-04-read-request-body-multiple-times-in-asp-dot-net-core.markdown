@@ -5,6 +5,7 @@ categories:
 - asp.net core
 tags:
 - asp.net core
+Field name: 
 layout: post
 ---
 
@@ -14,7 +15,7 @@ In [ASP.NET](http://asp.net/) Core, the request can not be read once it is con
 context.Request.EnableBuffering()
 ```
 
-As you know, the request body stream is forward only, you can not read the content from the body once it gets read by middleware or handler. The above method introduced in [ASP.NET](http://asp.net/) Core 2.1, provides multiple time seekable request body streams. This method copy incoming request body stream into`[FileBufferingReadStream](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.webutilities.filebufferingreadstream?view=aspnetcore-6.0)`. 
+As you know, the request body stream is forward only, you can not read the content from the body once it gets read by middleware or handler. The above method introduced in [ASP.NET](http://asp.net/) Core 2.1, provides multiple time seekable request body streams. This method copy incoming request body stream into [FileBufferingReadStream](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.webutilities.filebufferingreadstream?view=aspnetcore-6.0). 
 
 > **Note:** `Request.EnableBuffering` must be used before any operation is performed on the request body. As you know once the request body is read, it can not read again.
 > 
@@ -43,5 +44,12 @@ Request.Body.Position = 0;
 Things to do for reading or seeking `Request.Body` multiple times:
 
 - Use `Request.EnableBuffering` prior to any read operation on `Request.Body` stream.
-- Don’t dispose the `Stream` via `StreamReader` instance.
+- Don’t dispose of the `Stream` via `StreamReader` instance.
 - Reset `Request.Body.Position` to 0.
+
+Just keep in mind that:
+
+- Even though the memory stream is rented from a pool, it still has memory costs associated with it.
+- After the read is over the bufferThreshold in FileBufferingReadStream,  the performance will be slower since a file stream will be used.
+
+
