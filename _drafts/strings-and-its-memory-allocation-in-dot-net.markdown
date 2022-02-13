@@ -44,7 +44,7 @@ When we create something inside “”, CLR will automatically generate string d
 
 Now the question is, how we can add the string inside a string intern pool?
 
-`String.Intern` method is used to add the strings inside a string intern pool. `String.IsInterned` method is used to check whether a string exists inside a string intern pool. 
+String literals are automatically added to the intern pool by CLR. To manually, `String.Intern` method is used to add the strings inside a string intern pool. `String.IsInterned` method is used to check whether a string exists inside a string intern pool. 
 
 For example, the following snippet will only keep two strings around:
 
