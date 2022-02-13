@@ -12,7 +12,7 @@ layout: post
 
 # String and its memory allocation
 
-The string is the common data type and is used by almost every application. The string is a sequence of characters. Each character encoded in UTF-16 format, String data type has the following characteristics:
+The string is the common data type and is almost used by every application. The string is a sequence of characters. Each character encoded in UTF-16 format, String data type has the following characteristics:
 
 - It is a reference type
     
