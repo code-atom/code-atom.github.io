@@ -16,7 +16,7 @@ The string is the common data type and is almost used by every application. The 
 
 - It is a reference type
     
-    The string is a reference type, which means the string is a type of object which is allocated in a special memory called Heap, and CLR GC is responsible for the cleanup heap for further allocations. It is immutable in nature which is why it’s treated the same as a value type.
+    The string is a reference type, which means the string is a type of object which is allocated in a special memory called Heap. It is immutable in nature which is why it’s treated the same as a value type.
     
 - Immutable in nature
     
