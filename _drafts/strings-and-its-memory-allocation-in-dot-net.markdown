@@ -31,7 +31,7 @@ The string is the common data type and is almost used by every application. The 
     
 - It overloads the `==` operator
     
-    String use == operator, when comparing two string values. String.Equals method is used to compare the content of string variables. It only works if both operators are a type of string data type. If the object data type is used in that case reference equality is performed. Make sure when finding the equality of string always use string data type both side, operator are not applied polymorphically.
+    String use == operator, when comparing two string values. String.Equals method is used to compare the content of string variables. It only works if both operands are of string data type. If the object data type is used in that case reference equality is performed. Make sure when finding the equality of string always use string data type both side, operator are not applied polymorphically.
     
 
 ## When strings are allocated?
