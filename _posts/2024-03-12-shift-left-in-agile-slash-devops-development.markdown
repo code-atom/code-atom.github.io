@@ -3,8 +3,6 @@ title: Shift Left in Agile/DevOps Development
 date: 2024-03-12 13:20:00 +05:30
 ---
 
-# Shift Left in Agile/DevOps Development
-
 ### ***Preface***
 
 > As the demand to release quality software products in a short amount of time continues to accelerate, Agile and DevOps teams have to adopt new approaches to avoid falling behind. Continuous testing and shift left testing are two breakthrough solutions for them in the modern era of software delivery.
