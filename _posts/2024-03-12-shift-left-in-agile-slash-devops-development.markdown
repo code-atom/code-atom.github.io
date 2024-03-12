@@ -3,7 +3,9 @@ title: Shift Left in Agile/DevOps Development
 date: 2024-03-12 13:20:00 +05:30
 ---
 
-## ***Preface***
+# Shift Left in Agile/DevOps Development
+
+### ***Preface***
 
 > As the demand to release quality software products in a short amount of time continues to accelerate, Agile and DevOps teams have to adopt new approaches to avoid falling behind. Continuous testing and shift left testing are two breakthrough solutions for them in the modern era of software delivery.
 >
@@ -15,11 +17,11 @@ date: 2024-03-12 13:20:00 +05:30
 
 Traditional software development model is based on requirement engineering takes place on the left side of the project planning while delivery and testing requirements are on the right side. The model is not very flexible with changing client’s expectations and requirements and leads to negative outcomes for the business such as increased costs, increased time to market, and unexpected errors.
 
+![Untitled.png](/uploads/Untitled.png)
+
 Shift Left Testing literally pushes testing to the “left,” i.e., to earlier stages in the pipeline. The Shift Left approach intends to identify and resolve bugs as early as possible in the development process. This improves software quality and reduces time spent in resolving issues (which usually magnifies as development progress) later in the pipeline.
 
-![Untitled](Shift%20Left%20in%20Agile%20DevOps%20Development%2058736a49a08143c589759f9a1246c0f8/Untitled%201.png)
-
-![Untitled](Shift%20Left%20in%20Agile%20DevOps%20Development%2058736a49a08143c589759f9a1246c0f8/Untitled%202.png)
+![Untitled 1.png](/uploads/Untitled%201.png)![Untitled 2.png](/uploads/Untitled%202.png)
 
 Shift Left is core testing concept of the Agile DevOps methodology, which speed up application development by release small builds frequently  as code changes.
 
@@ -41,7 +43,7 @@ Shift Left support different type of models in software development. For more de
 
 [Agile](https://en.wikipedia.org/wiki/Agile_software_development) and [DevOps](https://en.wikipedia.org/wiki/DevOps) projects are characterized by multiple short-duration sprints, as opposed to a single or a small number of longer phases, such as in shift-left testing. These shorter periods may be adjusted if early sprints are dedicated to defining basic requirements and architecture or implementing test-first and [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) (TDD). The concept of "shift-left" arises from the fact that the types of testing performed during the initial stages of these smaller sprints precede those conducted during later stages of the larger sprint(s) they replace.
 
-![Untitled](Shift%20Left%20in%20Agile%20DevOps%20Development%2058736a49a08143c589759f9a1246c0f8/Untitled%203.png)
+![Untitled 3.png](/uploads/Untitled%203.png)
 
 While Agile and DevOps share similar features, Agile testing typically **focuses on developmental testing rather than operational testing**, which takes place after the system is deployed.
 
@@ -57,7 +59,7 @@ When testing is paused until the end of development, any bugs that do show up wi
 
 When it comes to fixing bugs, the earlier, the cheaper. According to the [NIST](https://www.nist.gov/), [resolving defects in production can cost 30 times more and up to 60 times more in case of security defects](https://www.vorto.co/blog/2020/2/27/reduce-cost-defects-service-now#:\~:text=The%20relative%20cost%20of%20fixing,in%20case%20of%20security%20defects).
 
-![Untitled](Shift%20Left%20in%20Agile%20DevOps%20Development%2058736a49a08143c589759f9a1246c0f8/Untitled%204.png)
+![Untitled 4.png](/uploads/Untitled%204.png)
 
 The Shift Left Testing approach implements a process that lets developers [find bugs](https://www.browserstack.com/guide/how-to-find-bugs-in-software) early and often. Bugs identified when code is being written or reviewed by devs are the easiest to fix because these code units are small and infinitely more manageable. Once merged into the main development branch, the breadth of code widens, and so does the effort required to find anomalies within it.
 
