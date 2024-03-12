@@ -71,7 +71,7 @@ Since bugs could occur at any iteration of software development, it makes sense 
 
 Shifting left requires two key practices – **continuous testing** and **continuous deployment.**
 
-* **[Continuous testing](https://bd-sts.atlassian.net/wiki/spaces/IDM/pages/790855802/IDM\+Shift\+Left\+Strategy#Conitinous-Testing)** is the process of executing automated tests as early as possible, along with service virtualization to mimic unavailable systems. Continuous testing establishes a constant feedback loop from the testing team to the developers. It ensures prompt bug identification and early bug detection. The entire software development process is therefore more optimized at every stage. Continuous testing relies quite heavily on automation.
+* **Continuous testing** is the process of executing automated tests as early as possible, along with service virtualization to mimic unavailable systems. Continuous testing establishes a constant feedback loop from the testing team to the developers. It ensures prompt bug identification and early bug detection. The entire software development process is therefore more optimized at every stage. Continuous testing relies quite heavily on automation.
 
 * **Continuous deployment**, the deployment pipelines are completely automated, and they have triggered automatically for every change or at an interval.
 
