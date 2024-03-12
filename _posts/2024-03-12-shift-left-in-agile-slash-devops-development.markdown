@@ -19,7 +19,9 @@ Traditional software development model is based on requirement engineering takes
 
 Shift Left Testing literally pushes testing to the “left,” i.e., to earlier stages in the pipeline. The Shift Left approach intends to identify and resolve bugs as early as possible in the development process. This improves software quality and reduces time spent in resolving issues (which usually magnifies as development progress) later in the pipeline.
 
-![Untitled 1.png](/uploads/Untitled%201.png)![Untitled 2.png](/uploads/Untitled%202.png)
+![Untitled 1.png](/uploads/Untitled%201.png)
+
+![Untitled 2.png](/uploads/Untitled%202.png)
 
 Shift Left is core testing concept of the Agile DevOps methodology, which speed up application development by release small builds frequently  as code changes.
 
