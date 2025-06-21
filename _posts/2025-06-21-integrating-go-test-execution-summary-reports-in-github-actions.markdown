@@ -1,6 +1,13 @@
 ---
 title: Integrating Go Test Execution Summary Reports in GitHub Actions
 date: 2025-06-21 11:31:00 +05:30
+categories:
+- go
+- testing
+tags:
+- go
+- github-actions
+- testing
 layout: post
 ---
 
