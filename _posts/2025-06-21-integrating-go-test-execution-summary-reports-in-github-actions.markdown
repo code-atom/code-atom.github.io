@@ -23,6 +23,11 @@ Before you begin, ensure that you have the following:
 
 3. The essential tool `go-ctrf-json-reporter` is installed in your workflow.
 
+## **Why CTRF?**
+
+The [Common Test Result Format](https://ctrf.io/) (CTRF) standardizes test result reporting, providing significant benefits for software testing teams and organizations. Its advantages include a consistent structure for reports, improved communication among stakeholders, and enhanced traceability by linking reports to specific test cases or defects. Additionally, CTRF supports integration with various testing tools, enabling automation in CI/CD pipelines, and facilitates compliance with regulatory standards. The format also allows for easier long-term analysis of test results and accommodates multiple testing types, ultimately leading to improved software quality and more effective testing.
+
+
 ## **Setting Up GitHub Action for Go Tests with CTRF JSON Reporter**
 
 To define a GitHub Action for running Go tests with the go-ctrf-json-reporter, you can create a workflow file (e.g., .github/workflows/execute-tests.yml) in your repository. Below is an example of how to set up the workflow:
