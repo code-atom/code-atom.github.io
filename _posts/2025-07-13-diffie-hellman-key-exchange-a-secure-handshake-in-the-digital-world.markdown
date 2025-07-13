@@ -31,6 +31,7 @@ To understand how Diffie-Hellman works, consider an analogy involving padlocks a
 Both Alice and Bob have successfully exchanged the secret without sending their keys over the insecure channel. An eavesdropper observing the process would only see the box being exchanged with different locks on it, but would not be able to open the box without both keys.
 
 ### The Mathematical Foundation and Example
+Bob and Alice Key exchange(/uploads/image-1fbda8.png)
 
 In the real-world Diffie-Hellman exchange, the process is implemented using large numbers and modular exponentiation. The security relies on the difficulty of solving the discrete logarithm problem.
 
