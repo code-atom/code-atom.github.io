@@ -31,7 +31,7 @@ To understand how Diffie-Hellman works, consider an analogy involving padlocks a
 Both Alice and Bob have successfully exchanged the secret without sending their keys over the insecure channel. An eavesdropper observing the process would only see the box being exchanged with different locks on it, but would not be able to open the box without both keys.
 
 ### The Mathematical Foundation and Example
-Bob and Alice Key exchange(/uploads/image-1fbda8.png)
+![Alice and Bob Key-exchange](/uploads/image-1fbda8.png)
 
 In the real-world Diffie-Hellman exchange, the process is implemented using large numbers and modular exponentiation. The security relies on the difficulty of solving the discrete logarithm problem.
 
@@ -73,13 +73,5 @@ Here is a simple example computation of the Diffie-Hellman key exchange:
 
 Both Alice and Bob arrive at the same shared secret, `18`. This shared secret can now be used for secure communication.
 
-For additional information on the Diffie-Hellman Key Exchange, you can explore the following sources:
-
-- [Diffie–Hellman key exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
-- [The Diffie–Hellman Key Exchange | James D. McCaffrey - WordPress.com](https://jamesmccaffrey.wordpress.com/2020/07/29/the-diffie-hellman-key-exchange/)
-- [What is the Diffie–Hellman key exchange? - Educative.io](https://www.educative.io/answers/what-is-the-diffiehellman-key-exchange)
-- [10. Diffie-Hellman Key Exchange - Computer Security](https://textbook.cs161.org/crypto/key-exchange.html)
-- [Rock Around the Clock: Part 1: The Diffie-Hellman Key Exchange | by James Dockeray](https://medium.com/@james-dockeray/rock-around-the-clock-part-1-the-diffie-hellman-key-exchange-e3324d0a2e04)
-- ["Diffie-Hellman Key Exchange" in plain English](https://security.stackexchange.com/questions/45963/diffie-hellman-key-exchange-in-plain-english)
-- [The Diffie Hellman key exchange - Polymesh](https://polymesh.network/blog/the-diffie-hellman-key-exchange)
--[Cryptography: Diffie-Hellman key exchange explained intuitively using colors - Reddit](https://www.reddit.com/r/programming/comments/7qq1bh/cryptography_diffiehellman_key_exchange_explained/)
+## Reference
+- [Diffie–Hellman key exchange (Wikipedia)]
