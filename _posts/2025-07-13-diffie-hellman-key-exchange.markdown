@@ -74,4 +74,4 @@ Here is a simple example computation of the Diffie-Hellman key exchange:
 Both Alice and Bob arrive at the same shared secret, `18`. This shared secret can now be used for secure communication.
 
 ## Reference
-- [Diffie–Hellman key exchange (Wikipedia)]
+- [Diffie–Hellman key exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
