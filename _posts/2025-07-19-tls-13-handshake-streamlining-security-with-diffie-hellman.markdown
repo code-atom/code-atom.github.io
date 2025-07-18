@@ -26,3 +26,6 @@ The Diffie-Hellman key exchange is a vital component of the Transport Layer Secu
 4. **Application Data:** Once the "Finished" messages are exchanged and verified, the secure symmetric encryption is established, and application data can be transmitted securely.
 
 In essence, Diffie-Hellman key exchange provides the mathematical bedrock for securely generating shared secrets, and TLS 1.3 masterfully integrates this principle to create a faster, more private, and significantly more secure internet.
+
+# Reference
+[Diffie-Hellman Key Exchange](https://codetalk.in/posts/2025/07/13/diffie-hellman-key-exchange)
