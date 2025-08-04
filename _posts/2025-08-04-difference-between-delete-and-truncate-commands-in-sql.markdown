@@ -8,32 +8,44 @@ tags:
 layout: post
 ---
 
+**The SQL query for delete operation includes TRUNCATE and DELETE commands.**
+
+They perform **deletion operations on unwanted records or rows of a table**. In the **DELETE statement, the rows from the table get deleted with a condition**. In simple words, **one or more rows can be deleted at once**. but in the **TRUNCATE command, all the rows get deleted at once**.
+
+When we use the DELETE query, a **log is created for every row in the transaction log**. This way we can get back the records using **ROLLBACK before COMMIT**. Also, when using TRUNCATE, we can get the records back using ROLLBACK. The difference is that **TRUNCATE only logs the deallocation of the page where data is stored.**
+
+
 # **What is a DELETE command?**
 
-- The DELETE statement is a **DML command (Data Manipulation Language).** It is used to delete single or multiple rows (records) from a table.
-- The **WHERE** clause in DELETE command **defines a condition** for deleting only the selected unwanted rows from the target table.
-- The DELETE query creates a log file in the transaction log. It stores the records before deleting them. So, in case, we delete one or many important rows, we can get them back using the **ROLLBACK** command.
-- Since the DELETE statement is a DML command, we have to commit the changes manually. Point to remember, the **ROLLBACK must be done before COMMIT**.
+* The DELETE statement is a **DML command (Data Manipulation Language).** It is used to delete single or multiple rows (records) from a table.
+
+* The **WHERE** clause in DELETE command **defines a condition** for deleting only the selected unwanted rows from the target table.
+
+* The DELETE query creates a log file in the transaction log. It stores the records before deleting them. So, in case, we delete one or many important rows, we can get them back using the **ROLLBACK** command.
+
+* Since the DELETE statement is a DML command, we have to commit the changes manually. Point to remember, the **ROLLBACK must be done before COMMIT**.
 
 ### **Syntax:**
 
 > DELETE FROM table_name WHERE condition;
-> 
 
 # **What is a TRUNCATE command?**
 
-- The TRUNCATE command is a **DDL command** **(Data Definition Language).** We use this command on tables to delete all the records at once.
-- The TRUNCATE command **does not use any condition,** like a WHERE clause to define a condition. So, we should use it only when all the data in the target table is unwanted.
-- The TRUNCATE command uses table lock to **lock the table and page** for truncate operation, instead of row lock. So, it only logs the deallocation of the pages that store the records, and as a result, it takes much less time than the DELETE command.
-- Since the TRUNCATE command is a DDL command, the **commit is automatically done** here.
-- The TRUNCATE command **resets the identity** to its seed value.
+* The TRUNCATE command is a **DDL command** **(Data Definition Language).** We use this command on tables to delete all the records at once.
+
+* The TRUNCATE command **does not use any condition,** like a WHERE clause to define a condition. So, we should use it only when all the data in the target table is unwanted.
+
+* The TRUNCATE command uses table lock to **lock the table and page** for truncate operation, instead of row lock. So, it only logs the deallocation of the pages that store the records, and as a result, it takes much less time than the DELETE command.
+
+* Since the TRUNCATE command is a DDL command, the **commit is automatically done** here.
+
+* The TRUNCATE command **resets the identity** to its seed value.
 
 **Seed value**: seed value in SQL refers to the internal value which the Server uses to generate the next value.
 
 ### **Syntax:**
 
 > TRUNCATE TABLE table_name;
-> 
 
 # **"TRUNCATE cannot be rolled back" - Fact or Myth?**
 
@@ -48,7 +60,6 @@ Meanwhile, the DELETE statement logs all the rows of the table, so, the DELETE s
 In conclusion, the TRUNCATE command can be rolled back for truncated records inside the transaction.
 
 > Page: It is the fundamental unit of data storage in SQL Server.
-> 
 
 **DELETE vs TRUNCATE**
 
