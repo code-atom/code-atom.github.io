@@ -1,6 +1,12 @@
 ---
 title: Adding and Enforcing Pull Request Checks in Your GitHub Repository
 date: 2025-08-15 23:52:00 +05:30
+categories:
+- go
+tags:
+- CI\CD
+- devops
+- github-actions
 layout: post
 ---
 
