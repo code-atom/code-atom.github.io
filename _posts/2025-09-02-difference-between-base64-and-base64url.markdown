@@ -45,12 +45,18 @@ Base64 and Base64url are both encoding schemes used to represent binary data in 
         16 Q            33 h            50 y
     ```
     
-- **Limitations in URLs:**The `+`, `/`, and `=` characters have special meanings in URLs and can cause issues if not properly percent-encoded, which adds complexity and increases the length of the URL.
+- **Limitations in URLs:**
+
+The `+`, `/`, and `=` characters have special meanings in URLs and can cause issues if not properly percent-encoded, which adds complexity and increases the length of the URL.
 
 ### **Base64URL**
 
-- **Purpose:** Base64url is a variant of Base64 specifically designed to be "URL-safe," meaning it avoids characters that are problematic in URLs.
-- **Character Set:**It modifies the standard Base64 character set:
+- **Purpose:** 
+
+Base64url is a variant of Base64 specifically designed to be "URL-safe," meaning it avoids characters that are problematic in URLs.
+- **Character Set:** 
+
+It modifies the standard Base64 character set:
     - The `+` character is replaced with  (hyphen/minus).
     - The `/` character is replaced with `_` (underscore).
     - Padding with `=` is often omitted or handled implicitly, as its presence can also cause issues in some URL contexts. The length of the encoded string can be used to determine if padding would be needed during decoding.
@@ -71,14 +77,16 @@ Base64 and Base64url are both encoding schemes used to represent binary data in 
          9 J            26 a            43 r            60 8
         10 K            27 b            44 s            61 9
         11 L            28 c            45 t            62 - (minus)
-        12 M            29 d            46 u            63 _
-        13 N            30 e            47 v           (underline)
+        12 M            29 d            46 u            63 _ (underline)
+        13 N            30 e            47 v           
         14 O            31 f            48 w
         15 P            32 g            49 x
         16 Q            33 h            50 y         (pad) =
     ```
     
-- **Advantages in URLs:**By using  and `_` instead of `+` and `/`, and by handling padding differently, Base64url eliminates the need for additional percent-encoding when embedding encoded data directly within URLs, making them cleaner and easier to handle.
+- **Advantages in URLs:**
+
+By using  and `_` instead of `+` and `/`, and by handling padding differently, Base64url eliminates the need for additional percent-encoding when embedding encoded data directly within URLs, making them cleaner and easier to handle.
 
 ### **Summary**
 
