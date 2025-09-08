@@ -1,6 +1,11 @@
 ---
 title: 'Demystifying Go Modules: go get, install, and tidy Explained'
 date: 2025-09-08 13:01:00 +05:30
+categories:
+- go
+tags:
+- general
+layout: post
 ---
 
 Welcome, Go developers! As you build applications, you'll constantly interact with Go's powerful command-line toolchain. Among the most fundamental are go install, go get, and go mod tidy. While they all manage Go code, they serve distinct purposes in the development lifecycle.
