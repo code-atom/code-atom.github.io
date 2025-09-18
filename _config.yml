@@ -2,14 +2,14 @@
 title: code-talk
 timezone: Asia/Kolkata
 collections:
-  posts:
-    title: Posts
-    output: true
   uploads:
     title: Uploads
     output: true
   guides:
     title: guides
+    output: true
+  posts:
+    title: posts
     output: true
 author: Ankit Rana
 email: ankit.rana.1195@gmail.com
