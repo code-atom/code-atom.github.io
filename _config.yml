@@ -8,9 +8,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-  angular:
-    title: angular
-    output: true
   guides:
     title: guides
     output: true
