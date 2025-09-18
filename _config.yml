@@ -11,6 +11,9 @@ collections:
   angular:
     title: angular
     output: true
+  guides:
+    title: guides
+    output: true
 author: Ankit Rana
 email: ankit.rana.1195@gmail.com
 defaultbackground: "/assets/images/backdrop.jpg"
