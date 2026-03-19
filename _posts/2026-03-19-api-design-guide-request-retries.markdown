@@ -11,24 +11,6 @@ tags:
 layout: post
 ---
 
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Retry Criteria](#retry-criteria)
-   - [HTTP Status Code Classification](#http-status-code-classification)
-   - [HTTP Method Safety](#http-method-safety)
-3. [Retry Strategies (Client-Side)](#retry-strategies-client-side)
-   - [Naive Fixed Retry](#1-naive-fixed-retry)
-   - [Exponential Backoff](#2-exponential-backoff)
-   - [Exponential Backoff with Jitter](#3-exponential-backoff-with-jitter-recommended)
-4. [Server-Side Guidance: Retry-After Header](#server-side-guidance-retry-after-header)
-5. [Complete Recommended Implementation](#complete-recommended-implementation)
-6. [Summary](#summary)
-
----
-
-## Overview
-
 In a distributed system, services are independently developed, deployed, and operated by different teams. Transient failures — due to network blips, downstream unavailability, or temporary overload — are unavoidable. Well-designed APIs must be built with retry behavior in mind so clients can recover gracefully without manual intervention.
 
 **The goal is to serve as many requests as possible while minimizing unnecessary retries.** This requires answering three questions:
@@ -40,6 +22,22 @@ In a distributed system, services are independently developed, deployed, and ope
 Retry logic is primarily implemented by the consumer (client), but the server can — and should — provide signals that make client retries more effective and safe.
 
 ---
+
+## Table of Contents
+
+1. [Retry Criteria](#retry-criteria)
+   - [HTTP Status Code Classification](#http-status-code-classification)
+   - [HTTP Method Safety](#http-method-safety)
+2. [Retry Strategies (Client-Side)](#retry-strategies-client-side)
+   - [Naive Fixed Retry](#1-naive-fixed-retry)
+   - [Exponential Backoff](#2-exponential-backoff)
+   - [Exponential Backoff with Jitter](#3-exponential-backoff-with-jitter-recommended)
+3. [Server-Side Guidance: Retry-After Header](#server-side-guidance-retry-after-header)
+4. [Complete Recommended Implementation](#complete-recommended-implementation)
+5. [Summary](#summary)
+
+---
+
 
 ## Retry Criteria
 
